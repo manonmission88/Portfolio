@@ -1,0 +1,38 @@
+.Home {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile-pic {
+    padding: 5px;
+    width: 367px;
+    height: 440px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.content {
+    margin-left: 40px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.intro {
+    margin-top: 20px;
+    /* Adjust margin from navbar */
+}
+
+.description {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.social-media {
+    margin-top: 40px;
+}
+.social-media a{
+    margin-top: 20px;
+}

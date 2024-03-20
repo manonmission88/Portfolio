@@ -1,0 +1,52 @@
+.project {
+    display: flex;
+    grid-template-columns: 1fr;
+    /* Change this to accommodate the image width */
+    position: relative;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+
+.project-img {
+    /* Ensure the image fits within its container */
+    width: 360px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.project-description {
+    /* Move description to the side */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-grow: 1;
+    /* Allow the description to take remaining space */
+    max-width: 70%;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.project-links img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+@media (min-width: base.$md-width) {
+    .project {
+        grid-template-columns: minmax(300px, 1fr) 1fr;
+        /* Adjust width of image column */
+    }
+
+    .project-description {
+        padding: 0;
+        /* Remove padding for description */
+    }
+}

@@ -1,0 +1,9 @@
+.resumebox {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 140px;
+    /* Adjust margin top as needed */
+    width: 80%;
+    /* Adjust width as needed */
+}

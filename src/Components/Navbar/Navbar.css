@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+        /* Adjust as needed */
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+}
+
+.nav-links a {
+    margin: 0 10px;
+    /* Adjust the margin as needed */
+}
