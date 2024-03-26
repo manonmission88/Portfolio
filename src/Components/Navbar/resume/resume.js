@@ -1,6 +1,7 @@
 import React from 'react';
 import myResume from './MANISH_NIURE__RESUME.pdf'
 import './resume.css'
+import transition from '../../../transition';
 
 function Resume() {
     return (
@@ -10,4 +11,4 @@ function Resume() {
     );
 }
 
-export default Resume;
+export default transition(Resume);

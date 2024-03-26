@@ -1,29 +1,32 @@
 .project {
     display: flex;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2%;
     /* Change this to accommodate the image width */
     position: relative;
-    gap: 0.8rem;
+    gap: 1.4rem;
     align-items: center;
-    margin-top: 40px;
-    margin-left: 130px;
+    margin-top: 30px;
+    margin-left: 100px;
 }
 
 .project-img {
     /* Ensure the image fits within its container */
-    width: 360px;
-    height: 400px;
+    width: 55%;
+    height: 250px;
     object-fit: cover;
+}
+.heading {
+    margin-bottom: 10px;
 }
 
 .project-description {
     /* Move description to the side */
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0.2rem;
     flex-grow: 1;
     /* Allow the description to take remaining space */
-    max-width: 70%;
+    max-width: 40%;
 }
 
 .project-links {

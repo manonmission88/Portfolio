@@ -1,6 +1,7 @@
 import './Home.css';
 import profilePic from './professional.jpg';
 import textData from '../../textData';
+import transition from '../../transition';
 
 function Home() {
     return (
@@ -20,7 +21,4 @@ function Home() {
         </div>
     );
 }
-
-export default Home;
-
-export { textData };
+export default transition(Home);

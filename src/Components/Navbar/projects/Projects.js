@@ -1,6 +1,7 @@
 import './Projects.css'
 import { projectData } from './projectData'
 import githubRepo from './github.png'
+import transition from '../../../transition';
 
 
 const Projects = () => {
@@ -15,12 +16,13 @@ const Projects = () => {
                         className="project-img"
                     />
                     <section className="project-description">
+                        <h1 className="heading">{project.name}</h1>
                         <p className="white-text p-tag">{project.description}</p>
-                        <section className="project-meta-stack">
+                        {/* <section className="project-meta-stack">
                             {project.stack.map((stackName, index) => (
                                 <p key={index}>{stackName}</p>
                             ))}
-                        </section>
+                        </section> */}
                         {/* <img src={GithubRepo} alt="Link to Github" /> */}
                         <section className="project-links">
                             <a href={project.source}>
@@ -35,4 +37,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default transition(Projects);

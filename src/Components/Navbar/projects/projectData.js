@@ -1,42 +1,15 @@
 
-import profilePic from '../../Home/professional.jpg'
+import customShell from './images/customshell.png'
 const projectData = [
     {
-        id: "rest-countries",
-        img: profilePic,
-        name: "Rest Countires",
-        stack: ["< RESTful API />", "< CSS3 />", "< React.js />"],
-        source: "https://github.com/manonmission88",
+        id: "project-1",
+        img: customShell,
+        name: "Custom Shell",
+        stack: ["C"],
+        source: "https://github.com/manonmission88/Operating--System/tree/main/project-1--create-a-simple-shell",
         description:
-            "REST Countries is a project made with API which also has a color theme switcher feature. You can view the list of all countries and find a specific one via search or by filtering regions. By navigating to the individual country page, you are able to see more details about the country like native name and even border countries.",
-    },
-    {
-        id: "url-shortener",
-        img: profilePic,
-        name: "URL Shortener",
-        stack: ["< HTML5 />", "< CSS />", "< Vanilla JS />", "< RESTful API />"],
-        source: "https://github.com/manonmission88",
-        description:
-            "The goal of this landing page challenge is integration with the shrtcode URL shortening API and playing with browser storage. The challenge is to integrate with the shrtcode API to create shortened URLs and display them like in the designs. You can use any JavaScript framework/library on the front-end such as React or Vue. You also have complete control over which packages you use to do things like make HTTP requests or style your project.",
-    },
-    {
-        id: "bankist",
-        img: profilePic,
-        name: "Bankist",
-        stack: ["< Vanilla JS />", "< CSS3 />", "< HTML5 />"],
-        source: "https://github.com/manonmission88",
-        description:
-            "Bankist is a fictional online bank and its goal is to practice DOM manipulation and user interaction. Bankist has an option to log in to the account and use different functionalities, almost like in an actual bank! By logging into your account you can transfer money to another account, take a loan or delete the account. Please check README for login info.",
-    },
-    {
-        id: "edgy",
-        img: profilePic,
-        name: "Edgy",
-        stack: ["< Tailwind />", "< React.js />", "< Express.js />", "< Airtable API />", "< Google ReCaptcha />"],
-        source: "https://github.com/catherineisonline/edgy",
-        description:
-            "Edgy - is a social media marketing agency that offers Instagram growth services to businesses and beginner influencers. The website includes prices, a contact form, a blog, a careers page, and more.",
-    },
+            "The command shell I developed in C supports essential functionalities such as changing directories, handling signals like SIGINT, and providing a clean exit mechanism. Users can navigate the file system effortlessly using the cd command, while signal handling ensures proper termination of processes. Additionally, the shell allows users to exit gracefully using the exit command or Ctrl+D input. These features, along with support for job control and command history, contribute to a user-friendly and efficient command-line experience.",
+    }
 ];
 
 export { projectData };
