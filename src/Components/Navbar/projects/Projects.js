@@ -1,40 +1,36 @@
 import './Projects.css'
 import { projectData } from './projectData'
-import githubRepo from './github.png'
+import githubLogo from './github.png'
 import transition from '../../../transition';
 
 
+const ProfileCard = ({ project }) => {
+    return (
+        <div className="profile-card" key={project.id}>
+            <div className="profile-description">
+                <h1 className="heading">{project.name}</h1>
+                <p className="white-text p-tag">{project.description}</p>
+            </div>
+            <div className="profile-links">
+                <a href={project.source} className="github-link">
+                    <img src={githubLogo} alt="GitHub Logo" className="github-logo" />
+                </a>
+                <div className="project-stack">
+                    {project.stack.map((item, index) => (
+                        <span key={index} className="stack-item">{item}</span>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
 const Projects = () => {
     return (
         <section className="portfolio-grid">
             {projectData.map((project) => (
-                <section key={project.id} className="project">
-                    <img
-                        src={project.img} 
-                        alt=""
-                        aria-hidden="true"
-                        className="project-img"
-                    />
-                    <section className="project-description">
-                        <h1 className="heading">{project.name}</h1>
-                        <p className="white-text p-tag">{project.description}</p>
-                        {/* <section className="project-meta-stack">
-                            {project.stack.map((stackName, index) => (
-                                <p key={index}>{stackName}</p>
-                            ))}
-                        </section> */}
-                        {/* <img src={GithubRepo} alt="Link to Github" /> */}
-                        <section className="project-links">
-                            <a href={project.source}>
-                                <img src={githubRepo} alt="Link to Github" />
-                            </a>
-                        </section>
-                    </section>
-                </section>
+                <ProfileCard project={project} />
             ))}
         </section>
-
     );
 };
-
 export default transition(Projects);

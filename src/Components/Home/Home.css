@@ -29,10 +29,23 @@
     justify-content: space-between;
     font-size: 18px;
 }
-
 .social-media {
-    margin-top: 40px;
+    display: column;
+    /* Use flexbox to align items horizontally */
+    align-items: center;
+    /* Align items vertically */
+    gap: 50px;
+    /* Add space between each item */
 }
-.social-media a{
-    margin-top: 20px;
+
+.social-media img {
+    margin-top: 30px;
+    width: 50px;
+    /* Set the width of all logos */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+}
+.username {
+    font: bold;
 }

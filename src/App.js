@@ -8,7 +8,6 @@ import Home from './Components/Home/Home';
 import Project from './Components/Navbar/projects/Projects';
 
 
-
 function App() {
   return (
     <Router>

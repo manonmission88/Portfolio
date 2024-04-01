@@ -1,55 +1,88 @@
-.project {
-    display: flex;
-    grid-template-columns: 2%;
-    /* Change this to accommodate the image width */
-    position: relative;
-    gap: 1.4rem;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 100px;
+.profile-card {
+    background-color: rgb(128, 164, 128);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    /* Remove fixed width */
+    /* Set a specific width */
+    /* margin-top: 40px; */
+    /* Center the card horizontally */
+    /* margin-left: 40px; */
+    width: calc(30% - 80px);
+    /* Adjust width dynamically based on margin */
+    margin: 40px;
 }
 
-.project-img {
-    /* Ensure the image fits within its container */
-    width: 55%;
-    height: 250px;
-    object-fit: cover;
+.profile-card:hover {
+    background-color: #c4baba;
+    /* Change background color on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+    transform: translateY(-5px);
+    /* Move card slightly up on hover */
 }
-.heading {
-    margin-bottom: 10px;
+.portfolio-grid {
+    display: flex;
+}
+.github-logo {
+    width: 50px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
-.project-description {
-    /* Move description to the side */
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    flex-grow: 1;
-    /* Allow the description to take remaining space */
-    max-width: 40%;
+.profile-description {
+    /* margin-bottom: 20px; */
+    flex: 1;
+
 }
 
-.project-links {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+.profile-description .heading {
     font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.profile-description .p-tag {
+    color: #4e3e3e;
+}
+
+.profile-links .github-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-links {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+.project-stack {
+    display: flex;
+}
+
+.stack-item {
+    background-color: #333333;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* Adjust spacing */
+    margin-bottom: 2px;
+    /* Adjust spacing */
+    font-weight: bold;
+}
+
+.github-logo {
+    width: 50px;
+    /* Adjust size as needed */
+}
+
+.profile-links .github-link:hover {
     text-decoration: underline;
-}
-
-.project-links img {
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-@media (min-width: base.$md-width) {
-    .project {
-        grid-template-columns: minmax(300px, 1fr) 1fr;
-        /* Adjust width of image column */
-    }
-
-    .project-description {
-        padding: 0;
-        /* Remove padding for description */
-    }
 }
