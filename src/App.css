@@ -33,3 +33,8 @@ body {
 button {
   cursor: pointer;
 }
+
+.dark-mode {
+  background-color: rgb(47, 47, 47);
+  color: rgb(255, 255, 255);
+}
