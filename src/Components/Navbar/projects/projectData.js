@@ -26,6 +26,7 @@ const projectData = [
         source: "https://github.com/manonmission88/Digital-Notebook",
         description: "A desktop app to keep track of assignments given by professors. Similar to the concept of maintaining homework notes in a physical diary, this app allows users to manage assignments digitally. Built with Tkinter for the frontend and SQLite for the backend, it offers a user-friendly interface for tracking assignments.",
     }
+  
 ];
 
 export { projectData };

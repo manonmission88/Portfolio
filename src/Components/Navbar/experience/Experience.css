@@ -1,0 +1,92 @@
+/* Experience Section */
+.experience-section {
+    /* Ensure dark background for contrast */
+    padding: 50px 20px;
+    color: #ffffff;
+    /* White text for contrast */
+}
+
+.experience-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    /* Space after the title */
+    color: #ffffff;
+}
+
+/* Timeline Container */
+.experience-timeline {
+    position: relative;
+    padding-left: 40px;
+    /* Indent for timeline */
+    border-left: 2px solid #3b82f6;
+    /* Vertical line color */
+    margin-left: 10px;
+}
+
+/* Each Experience Item */
+.experience-item {
+    margin-bottom: 40px;
+    /* Space between each experience entry */
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Experience Date */
+.experience-date {
+    font-size: 1rem;
+    color: #5a6a68;
+    margin-bottom: 10px;
+    /* Remove bottom margin */
+}
+
+/* Role */
+.experience-role {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5a6a68;
+    margin: 0px;
+    /* Remove all margins */
+}
+
+/* Company */
+.experience-company {
+    font-size: 1.5rem;
+    color: #1a907f;
+    margin: 0px;
+}
+
+/* Experience Details (Bulleted List) */
+.experience-details {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 5px;
+    /* Space above details */
+}
+
+.experience-details li {
+    font-size: 1rem;
+    color: whitesmoke;
+    /* Light color for description text */
+    margin-bottom: 5px;
+    /* Slight space between each bullet */
+}
+
+/* Timeline Dot */
+.experience-item:before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: #3b82f6;
+    /* Blue dot color */
+    border-radius: 50%;
+}
+
+/* Hover Effect on Role */
+.experience-role:hover {
+    color: #ffffff;
+    /* White color on hover */
+}

@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Resume from './Components/Navbar/resume/resume';
 import Home from './Components/Home/Home';
 import Project from './Components/Navbar/projects/Projects';
+import Experience from './Components/Navbar/experience/Experience';
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -38,6 +39,8 @@ function App() {
           <Route path='/resume' element={<Resume />} />
           <Route path='/about' element={<Home />} />
           <Route path='/projects' element={<Project />} />
+          <Route path='/experience' element={<Experience />} />
+
         </Routes>
       </div>
     </Router>

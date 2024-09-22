@@ -13,6 +13,7 @@ function Navbar({ mode, toggleMode }) {
             <div className="nav-links">
                 <Link to='/resume'>Resume</Link>
                 <Link to='/projects'>Projects</Link>
+                <Link to='/experience'>Experience</Link>
                 <Link to='/about'>About</Link>
             </div>
             <div className="btn">

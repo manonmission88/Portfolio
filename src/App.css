@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(141, 195, 195);
+  background-color: light-dark(#ccc, #333);
 
 }
 
@@ -35,6 +35,6 @@ button {
 }
 
 .dark-mode {
-  background-color: rgb(47, 47, 47);
+  background-color: light-dark(#333, #fafafa);
   color: rgb(255, 255, 255);
 }

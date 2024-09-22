@@ -1,91 +1,29 @@
-.profile-card {
-    background-color: rgb(128, 164, 128);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    /* Remove fixed width */
-    /* Set a specific width */
-    /* margin-top: 40px; */
-    /* Center the card horizontally */
-    /* margin-left: 40px; */
-    width: calc(30% - 80px);
-    /* Adjust width dynamically based on margin */
-    margin: 20px;
+
+.projects-section {
+    padding: 60px 20px;
+    min-height: 100vh;
 }
 
-
-.profile-card:hover {
-    background-color: #c4baba;
-    /* Change background color on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    /* Add shadow on hover */
-    transform: translateY(-5px);
-    /* Move card slightly up on hover */
+.projects-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
 }
+
+/* Flexbox grid structure */
 .portfolio-grid {
     display: flex;
-}
-.github-logo {
-    width: 50px;
-    /* Adjust the width as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-}
-
-.profile-description {
-    /* margin-bottom: 20px; */
-    flex: 1;
-
-}
-
-.profile-description .heading {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.profile-description .p-tag {
-    color: #4e3e3e;
-}
-
-.profile-links .github-link {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.profile-links {
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    
-}
-
-.project-stack {
-    display: flex;
     flex-wrap: wrap;
-    /* Wrap items to the next line when they exceed the container width */
-    width: 80%;
+    justify-content: space-between;
+    /* Ensures even spacing between cards */
+    gap: 20px;
+    /* Adjust the spacing between cards */
 }
 
-.stack-item {
-    background-color: #333333;
-    color: #fff;
-    padding: 5px 10px;
-    margin: 2px 5px;
-    /* Adjust spacing */
-    font-weight: bold;
-    white-space: nowrap;
-    /* Prevent wrapping */
-}
-
-.github-logo {
-    width: 50px;
-    /* Adjust size as needed */
-}
-
-.profile-links .github-link:hover {
-    text-decoration: underline;
+/* Ensure cards are centered on smaller screens */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        justify-content: center;
+    }
 }
