@@ -1,7 +1,6 @@
-
 .projects-section {
     padding: 60px 20px;
-    min-height: 100vh;
+    margin-top: 100px;
 }
 
 .projects-title {
@@ -11,19 +10,27 @@
     margin-bottom: 50px;
 }
 
-/* Flexbox grid structure */
+/* CSS Grid layout for 3 cards per row */
 .portfolio-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* Ensures even spacing between cards */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal-width columns */
     gap: 20px;
-    /* Adjust the spacing between cards */
+    /* Adjust the space between cards */
 }
 
-/* Ensure cards are centered on smaller screens */
-@media (max-width: 768px) {
+
+/* Ensure the layout adjusts for smaller screens */
+@media (max-width: 600px) {
     .portfolio-grid {
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 equal columns on medium screens */
+    }
+}
+
+@media (max-width: 700px ) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        /* 1 card per row on small screens */
     }
 }

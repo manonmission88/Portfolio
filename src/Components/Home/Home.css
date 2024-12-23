@@ -1,7 +1,12 @@
 .Home {
+    position: relative;
     display: flex;
+    margin-top: 120px;
     justify-content: center;
     height: 100%;
+    color: var(--text-color);
+    overflow: hidden;
+    /* Use the background color variable */
 }
 
 .profile-pic {
@@ -19,33 +24,5 @@
 }
 
 .intro {
-    margin-top: 20px;
-    /* Adjust margin from navbar */
-}
-
-.description {
-    max-width: 60%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-}
-.social-media {
-    display: column;
-    /* Use flexbox to align items horizontally */
-    align-items: center;
-    /* Align items vertically */
-    gap: 50px;
-    /* Add space between each item */
-}
-
-.social-media img {
-    margin-top: 30px;
-    width: 50px;
-    /* Set the width of all logos */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-right: 20px;
-}
-.username {
-    font: bold;
+    margin-top: 40px;
 }

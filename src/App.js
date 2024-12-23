@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import textData from './textData';
 import './App.css'
 import Navbar from './Components/Navbar/Navbar';
 import Resume from './Components/Navbar/resume/resume';
@@ -30,9 +29,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="heading">
-          <h1>{textData.name}</h1>
-        </div>
         <Navbar mode={mode} toggleMode={toggleMode} />
         <Routes>
           <Route path='/' element={<Home />} />

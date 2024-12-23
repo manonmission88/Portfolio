@@ -1,92 +1,142 @@
 /* Experience Section */
 .experience-section {
-    /* Ensure dark background for contrast */
     padding: 50px 20px;
-    color: #ffffff;
-    /* White text for contrast */
-}
+    color: var(--text-color);
+    margin-top: 50px;
+  }
 
 .experience-title {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 30px;
-    /* Space after the title */
-    color: #ffffff;
+    color: var(--text-color);
 }
 
-/* Timeline Container */
-.experience-timeline {
-    position: relative;
-    padding-left: 40px;
-    /* Indent for timeline */
-    border-left: 2px solid #3b82f6;
-    /* Vertical line color */
-    margin-left: 10px;
+/* Experience Category */
+.experience-category {
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.category-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Experience Items Container */
+.experience-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 /* Each Experience Item */
 .experience-item {
-    margin-bottom: 40px;
-    /* Space between each experience entry */
-    padding-left: 20px;
-    position: relative;
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: 300px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    margin-left: 20px;
 }
 
-/* Experience Date */
-.experience-date {
-    font-size: 1rem;
-    color: #5a6a68;
-    margin-bottom: 10px;
-    /* Remove bottom margin */
+.experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Darker background on hover */
+    border-color: var(--light-green);
+    /* Light green border on hover */
 }
 
-/* Role */
-.experience-role {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #5a6a68;
-    margin: 0px;
-    /* Remove all margins */
+/* Experience Header */
+.experience-header {
+    margin-bottom: 5px;
 }
 
-/* Company */
 .experience-company {
-    font-size: 1.5rem;
-    color: #1a907f;
-    margin: 0px;
+    font-size: 17px;
+    color: var(--primary-color);
+    font-weight: medium;
+}
+
+.experience-role {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--text-color);
+    font-style: italic;
+    margin-top: 1px;
+}
+
+.experience-link {
+    font-size: 0.75rem;
+    color: var(--LightGray);
+    opacity: 0.5;
+    font-style: italic;
+    text-decoration: none;
+    margin-top: 5px;
+    display: block;
+}
+
+.experience-link:hover {
+    text-decoration: underline;
 }
 
 /* Experience Details (Bulleted List) */
 .experience-details {
+    margin-top: 10px;
+    padding-left: 20px;
     list-style-type: disc;
-    margin-left: 20px;
-    margin-top: 5px;
-    /* Space above details */
+    font-size: 1rem;
+    color: var(--LightGray);
 }
 
 .experience-details li {
-    font-size: 1rem;
-    color: whitesmoke;
-    /* Light color for description text */
-    margin-bottom: 5px;
-    /* Slight space between each bullet */
+    margin-bottom: 10px;
 }
 
-/* Timeline Dot */
-.experience-item:before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 0;
-    width: 16px;
-    height: 16px;
-    background-color: #3b82f6;
-    /* Blue dot color */
-    border-radius: 50%;
+/* Experience Footer */
+.experience-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--DeepNightBlack);
+    color: var(--LightGray);
+    width: 100%;
+    height: auto;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    opacity: 0.5;
 }
 
-/* Hover Effect on Role */
-.experience-role:hover {
-    color: #ffffff;
-    /* White color on hover */
+/* Responsiveness */
+@media (max-width: 768px) {
+    .experience-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Add a subtle animation to the experience items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

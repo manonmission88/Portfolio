@@ -9,19 +9,23 @@ function Navbar({ mode, toggleMode }) {
     const sun = <Icon icon="akar-icons:sun" color={changeColor} />;
 
     return (
-        <div className="navbar">
-            <div className="nav-links">
-                <Link to='/resume'>Resume</Link>
-                <Link to='/projects'>Projects</Link>
-                <Link to='/experience'>Experience</Link>
-                <Link to='/about'>About</Link>
+        <nav className="navbar">
+            <div className="logo"></div>
+            <div className="navlinks">
+                <ul>
+                    <li>🏠 <Link to="/">Home</Link></li>
+                    <li>📄 <Link to="/resume">Resume</Link></li>
+                    <li>💾 <Link to="/projects">Projects</Link></li>
+                    <li>💼 <Link to="/experience">Experience</Link></li>
+                    <li>👤 <Link to="/about">About</Link></li>
+                </ul>
             </div>
             <div className="btn">
                 <button type="button" className="btn1" onClick={toggleMode}>
                     {mode === "light" ? moon : sun}
                 </button>
             </div>
-        </div>
+        </nav>
     );
 }
 

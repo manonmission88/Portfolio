@@ -1,8 +1,7 @@
 import React from 'react';
-import { projectData } from './projectData';
+import { projectData } from './projectData'; // Ensure path is correct
 import ProjectCard from './ProjectCard';
-import transition from '../../../transition';
-import './Projects.css'; // Custom CSS
+import './Projects.css';
 
 function Projects() {
     return (
@@ -14,6 +13,8 @@ function Projects() {
                         title={project.name}
                         description={project.description}
                         link={project.source}
+                        image={project.img}
+                        stack={project.stack}
                     />
                 ))}
             </div>
@@ -21,4 +22,4 @@ function Projects() {
     );
 }
 
-export default transition(Projects);
+export default Projects;

@@ -1,93 +1,210 @@
-/* Individual Project Card Styling */
+/* Project Card */
 .project-card {
-    background-color:#494D5F;
-    border-radius: 10px;
-    width: 240px;
-    /* Consistent card width */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* Ensure space between content and logo */
-    box-shadow: 0 4px 8px rgba(41, 83, 103, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    padding-bottom: 10px;
-    /* Add padding for better visual spacing */
+    background-color: #a2a2a2;
+    color: var(--text-color);
+    border: 1px solid #535353;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.15s cubic-bezier(.4, 0, .2, 1);
+    cursor: pointer;
     margin-bottom: 20px;
-    /* Add margin for spacing between cards */
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width and height */
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(91, 145, 125, 0.3);
+    --tw-border-opacity: 1;
+    border-color: rgb(--light-green / var(--tw-border-opacity));
+    /* Hover border color */
+    background-color: #51473D;
+    /* Stronger background color on hover */
+    color: white;
+    /* Change text color on hover for better contrast */
 }
 
-/* Project Content Formatting */
+.project-image {
+    padding: 1rem;
+    transition: all 0.15s cubic-bezier(.4, 0, .2, 1);
+    flex: 0 0 auto;
+    /* Allow the image to take up its natural space */
+}
+
+.project-card:hover .project-image {
+    padding: 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
 .project-content {
-    padding: 15px;
-    text-align: left;
-    flex-grow: 1;
-    /* Allow content to grow and take up available space */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 1 1 auto;
+    /* Allow the content to grow and shrink */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-header {
+    margin-bottom: 10px;
 }
 
 .project-title {
     font-size: 1.25rem;
-    color: #ffffff;
-    margin-bottom: 10px;
+    font-weight: medium;
+    line-clamp: 1;
+}
+
+.project-stack {
+    margin-top: 10px;
+}
+
+.stack-item {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.875rem;
 }
 
 .project-description {
+    margin-top: 4px;
     font-size: 1rem;
-    color: #cccccc;
-    margin-bottom: 15px;
-    line-height: 1.6;
+    opacity: 0.8;
+    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: justify;
 }
 
-/* Logo Placement at the Bottom Left */
-.project-logo {
+.project-footer {
     display: flex;
-    justify-content: flex-start;
-    /* Align logo to the left */
-    padding-left: 15px;
-    /* Add some padding to keep the logo away from the edge */
-    padding-bottom: 10px;
-    margin-top: auto;
-    /* Pushes the logo to the bottom */
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 10px;
+    flex-shrink: 0;
+    /* Prevent the footer from shrinking */
+}
+
+.project-button,
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.project-button:hover,
+.github-link:hover {
+    color: var(--light-green);
 }
 
 .github-logo {
-    width: 50px;
-    /* Smaller logo size */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Utility Classes */
+.object-cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+
+img,
+video {
+    max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.github-logo:hover {
-    transform: scale(1.1);
-    /* Slightly enlarge on hover */
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+    display: block;
+    vertical-align: middle;
 }
 
-/* Layout Styling for Cards in Grid */
-.portfolio-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    /* Spacing between cards */
-}
-
-/* Ensure 3 cards per row */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .project-card {
-        flex: 1 1 calc(33.33% - 20px);
-        /* Three cards per row */
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-image {
+        padding: 0;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .stack-item {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .project-footer {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .github-logo {
+        width: 18px;
+        height: 18px;
     }
 }
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 1rem;
+    }
 
-/* Center the cards on smaller screens */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        justify-content: center;
+    .stack-item {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+    }
+
+    .github-logo {
+        width: 16px;
+        height: 16px;
     }
 }

@@ -1,35 +1,98 @@
+/* Navbar */
 .navbar {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-color: #ffffff1f;
+    max-width: 100%;
+    padding: 15px;
+    width: auto;
+    opacity: 1;
+    border-radius: 100px;
+    box-shadow: #0000001a 0 4px 6px -1px, #0000000f 0 2px 4px -1px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100%;
-        /* Adjust as needed */
+    height: auto;
+    border: 1px solid grey;
+    z-index: 1000;
+    font-family: 'Lexend Deca', sans-serif;
 }
-.nav-links  {
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .navlinks ul {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .navlinks ul li {
+    margin: 0 15px;
+}
+
+.navbar .navlinks ul li a {
     text-decoration: none;
-
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.btn1 {
-    margin-right: 0.5rem;
-    background-color: transparent;
+.navbar .navlinks ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .username {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar .material-symbols-outlined {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar .btn {
+    margin-left: 20px;
+}
+
+.navbar .btn1 {
+    background: none;
     border: none;
-    border-radius: 1.5rem;
     cursor: pointer;
     font-size: 1.5rem;
-}
-.nav-links a {
-    margin: 0 10px;
-    /* Adjust the margin as needed */
-    font-weight: bold;
-    color: black;
-    font-size: 20px;
+    color: var(--text-color);
 }
 
-.nav-links a:hover {
-    color:rgb(205, 87, 8);
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar .navlinks ul {
+        display: none;
+    }
+
+    .navbar .logo {
+        display: block;
+    }
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffef;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }

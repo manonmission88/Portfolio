@@ -1,3 +1,4 @@
+import React from 'react';
 import './Home.css';
 import profilePic from './professional.jpg';
 import textData from '../../textData';
