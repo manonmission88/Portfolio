@@ -16,13 +16,44 @@
     margin-left: 200px;
     margin-top: 20px;
 }
-
-.content {
-    margin-left: 40px;
-    margin-top: 20px;
+.description {
+    margin-top: 70px;
+    text-align: justify;
     text-align: left;
 }
 
-.intro {
-    margin-top: 40px;
+.content {
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+    width: 700px;
+}
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Space between the logos */
+    margin-top: 60px;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.4s ease;
+}
+
+.social-media a:hover .social-logo {
+    transform: scale(1.1);
+    /* Slightly enlarge the logo on hover */
+}
+
+.icon {
+    font-size: 2rem;
+    margin: 10px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--light-green);
 }

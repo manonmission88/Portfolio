@@ -17,6 +17,7 @@ function Navbar({ mode, toggleMode }) {
                     <li>📄 <Link to="/resume">Resume</Link></li>
                     <li>💾 <Link to="/projects">Projects</Link></li>
                     <li>💼 <Link to="/experience">Experience</Link></li>
+                    <li>🎓 <Link to="/extracurricular">ExtraCurricular</Link></li>
                     <li>👤 <Link to="/about">About</Link></li>
                 </ul>
             </div>

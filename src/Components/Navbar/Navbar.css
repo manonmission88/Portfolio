@@ -1,98 +1,124 @@
-/* Navbar */
+/* RESET & BASE STYLES */
+
+/* NAVBAR CONTAINER */
 .navbar {
     position: fixed;
-    top: 40px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
+
+    /* Blur effect (Safari needs -webkit- prefix) */
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    background-color: #ffffff1f;
-    max-width: 100%;
-    padding: 15px;
-    width: auto;
-    opacity: 1;
-    border-radius: 100px;
-    box-shadow: #0000001a 0 4px 6px -1px, #0000000f 0 2px 4px -1px;
+    background-color: rgba(255, 255, 255, 0.12);
+
+    /* Spacing & Layout */
+    width: calc(100% - 40px);
+    /* Leaves a little margin on mobile */
+    max-width: 600px;
+    height: 40px;;
+    padding: 15px 20px;
+    border-radius: 40px;
+    border: 1px solid grey;
+
+    /* Display & Alignment */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: auto;
-    border: 1px solid grey;
-    z-index: 1000;
-    font-family: 'Lexend Deca', sans-serif;
-}
 
+    /* Depth & Shadows */
+    z-index: 1000;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0 2px 4px -1px; */
+    box-shadow: 0 4px 6px rgba(65, 58, 58, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slightly more transparent on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    /* Slightly deeper shadow on hover */
+}
+/* LOGO AREA */
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    /* You can add actual text or an image logo here */
 }
 
+/* NAV LINKS */
 .navbar .navlinks ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar .navlinks ul li {
-    margin: 0 15px;
+    gap: 15px;
+    /* Spacing between menu items */
 }
 
 .navbar .navlinks ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: black;
+    /* Use a solid color to ensure visibility */
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .navbar .navlinks ul li a:hover {
-    color: var(--primary-color);
+    color: #4b9cea;
+    /* Hover color */
 }
 
-.navbar .username {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.navbar .material-symbols-outlined {
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.navbar .btn {
-    margin-left: 20px;
-}
-
+/* BUTTON AREA */
 .navbar .btn1 {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: black;
 }
 
-/* Responsive Navbar */
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet-ish screens and smaller (max-width: 768px) */
 @media (max-width: 768px) {
+    .navbar {
+        top: 5px;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+
+    /* Logo slightly smaller text */
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust gap or make items stack */
     .navbar .navlinks ul {
-        display: none;
+        flex-wrap: wrap;
+        /* Allows items to wrap onto a new line */
+        justify-content: center;
+    }
+}
+
+/* Very small phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        top: 5px;
+        padding: 8px 15px;
+        border-radius: 15px;
     }
 
     .navbar .logo {
-        display: block;
+        font-size: 1rem;
     }
-}
 
-/* General Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    /* Stack items in a column if you prefer */
+    .navbar .navlinks ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-body {
-    background-color: #ffffef;
-    width: 100%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+    /* Adjust button size for smaller screens */
+    .navbar .btn1 {
+        font-size: 1.2rem;
+    }
 }
