@@ -19,11 +19,11 @@
 
 .project-card:hover {
     --tw-border-opacity: 1;
-    border-color: rgb(--light-green / var(--tw-border-opacity));
+    border: 2px solid #007bff;
     /* Hover border color */
-    background-color: #51473D;
+    background-color: #f1f7ff;
     /* Stronger background color on hover */
-    color: white;
+
     /* Change text color on hover for better contrast */
 }
 

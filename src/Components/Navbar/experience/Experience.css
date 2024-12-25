@@ -1,142 +1,108 @@
-/* Experience Section */
+/* General styles */
 .experience-section {
-    padding: 50px 20px;
-    color: var(--text-color);
-    margin-top: 50px;
-  }
-
-.experience-title {
+    padding: 2rem;
     text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    color: var(--text-color);
+   
 }
 
-/* Experience Category */
-.experience-category {
-    margin-bottom: 40px;
-    color: var(--text-color);
-}
-
-.category-title {
+.grid-category-title {
     font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-    text-align: center;
+    margin: 2rem 0 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 100px;
 }
 
-/* Experience Items Container */
-.experience-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: flex-start;
-    padding-left: 20px;
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
 }
 
-/* Each Experience Item */
-.experience-item {
-    flex: 1 1 calc(33.33% - 40px);
-    max-width: 300px;
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 20px;
+.experience-card {
+    background-color: #a2a2a2;
+    padding: 2rem;
+    border-radius: 16px;
+    /* More rounded corners for a modern look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    margin-left: 20px;
+    /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s, background-color 0.3s;
+    text-align: left;
+    border: 2px solid transparent;
+    /* Add a default border */
 }
 
-.experience-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* Darker background on hover */
-    border-color: var(--light-green);
-    /* Light green border on hover */
+/* Hover effect */
+.experience-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f1f7ff;
+    /* Subtle light blue background */
+    border: 2px solid #007bff;
+    /* Add a border color on hover */
 }
 
-/* Experience Header */
-.experience-header {
-    margin-bottom: 5px;
+.experience-card-icon {
+    margin-bottom: 1rem;
+    text-align: center;
+    
 }
 
-.experience-company {
-    font-size: 17px;
-    color: var(--primary-color);
-    font-weight: medium;
+/* Title and Subtitle */
+.experience-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.5rem;
 }
 
-.experience-role {
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: var(--text-color);
-    font-style: italic;
-    margin-top: 1px;
+.experience-card-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
-.experience-link {
-    font-size: 0.75rem;
-    color: var(--LightGray);
-    opacity: 0.5;
-    font-style: italic;
-    text-decoration: none;
-    margin-top: 5px;
-    display: block;
-}
-
-.experience-link:hover {
-    text-decoration: underline;
-}
-
-/* Experience Details (Bulleted List) */
-.experience-details {
-    margin-top: 10px;
-    padding-left: 20px;
-    list-style-type: disc;
+/* Date styling */
+.experience-card-date {
     font-size: 1rem;
-    color: var(--LightGray);
+    color: #090707;
+    margin-bottom: 1rem;
 }
 
-.experience-details li {
-    margin-bottom: 10px;
+/* Details list */
+.experience-card-details {
+    list-style: none;
+    /* Remove bullet points for cleaner look */
+    padding: 0;
+    margin: 0;
 }
 
-/* Experience Footer */
-.experience-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--DeepNightBlack);
-    color: var(--LightGray);
-    width: 100%;
-    height: auto;
-    font-size: 0.75rem;
-    border-radius: 9999px;
-    padding: 10px 20px;
-    margin-top: 10px;
-    opacity: 0.5;
+.experience-card-details li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    /* Better readability for multiple lines */
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .experience-item {
-        width: 100%;
-    }
+/* Howard University image styling */
+.company-icon-image {
+    width: 60px;
+    /* Slightly larger for better visibility */
+    height: 60px;
+    object-fit: cover;
+    /* Ensures the image is properly resized without distortion */
+    border-radius: 50%;
+    /* Circular style */
+    border: 3px solid #ddd;
+    /* Subtle border around the image */
+    transition: border 0.3s;
 }
 
-@media (max-width: 480px) {
-    .category-title {
-        font-size: 1.5rem;
-    }
-}
-
-/* Add a subtle animation to the experience items */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.company-icon-image:hover {
+    border-color: #007bff;
+    /* Match hover border with card */
 }

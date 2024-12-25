@@ -6,6 +6,9 @@ import Resume from './Components/Navbar/resume/resume';
 import Home from './Components/Home/Home';
 import Project from './Components/Navbar/projects/Projects';
 import Experience from './Components/Navbar/experience/Experience';
+import ExtraCurricular from './Components/Navbar/extraCurricular/ExtraCurricular';
+import ContactSection from './Components/Navbar/contact/ContactSection';
+
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -33,9 +36,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/resume' element={<Resume />} />
-          <Route path='/about' element={<Home />} />
           <Route path='/projects' element={<Project />} />
           <Route path='/experience' element={<Experience />} />
+          <Route path='/extracurricular' element={<ExtraCurricular />} />
+          <Route path='/contact' element={<ContactSection />} />
 
         </Routes>
       </div>
