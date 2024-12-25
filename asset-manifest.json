@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.adeebecb.css",
+    "main.js": "/Portfolio/static/js/main.869973b3.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/freshman_howard.jpg": "/Portfolio/static/media/freshman_howard.6af87e6132916d3f1610.jpg",
+    "static/media/side-quest.png": "/Portfolio/static/media/side-quest.fbf4447055b8696d3dc9.png",
+    "static/media/group.JPG": "/Portfolio/static/media/group.248fe09e9c46e894c7b8.JPG",
+    "static/media/google_hbcu_hackathon.png": "/Portfolio/static/media/google_hbcu_hackathon.72bf90f50fb17d7a002f.png",
+    "static/media/meta-abcs.png": "/Portfolio/static/media/meta-abcs.daf2fb49e3f0cac9d8e4.png",
+    "static/media/localwiki.png": "/Portfolio/static/media/localwiki.67dfe2b315634f6865c5.png",
+    "static/media/soccer.jpeg": "/Portfolio/static/media/soccer.51b4e2f919aa5ea588ea.jpeg",
+    "static/media/meta.jpeg": "/Portfolio/static/media/meta.c7a56eb0c5348655bd6f.jpeg",
+    "static/media/chess.jpg": "/Portfolio/static/media/chess.aa9d86b40d62671b4594.jpg",
+    "static/media/market_madness.png": "/Portfolio/static/media/market_madness.263442151a59027b403e.png",
+    "static/media/hiking1.jpg": "/Portfolio/static/media/hiking1.cef354738639ea587375.jpg",
+    "static/media/hiking.jpeg": "/Portfolio/static/media/hiking.37fa5320e7247d2af5ff.jpeg",
+    "static/media/techexchange.jpeg": "/Portfolio/static/media/techexchange.17102de92a1893e38c4a.jpeg",
+    "static/media/oregon.jpeg": "/Portfolio/static/media/oregon.b9d9a1637528d4b313c3.jpeg",
+    "static/media/bison_hack.png": "/Portfolio/static/media/bison_hack.7d48076bcb9faf4fbe24.png",
+    "static/media/google_coding_challenge.png": "/Portfolio/static/media/google_coding_challenge.de12ea9de755dc4dea78.png",
+    "static/media/multi_resized.png": "/Portfolio/static/media/multi_resized.ada590b9f63c22a02dc5.png",
+    "static/media/updated_niure_manish_resume_swe.pdf": "/Portfolio/static/media/updated_niure_manish_resume_swe.f9cc2f45718689c569bc.pdf",
+    "static/media/customshell.png": "/Portfolio/static/media/customshell.243aeb9ccaf8e767b28e.png",
+    "static/media/disaster_tweet_chart.png": "/Portfolio/static/media/disaster_tweet_chart.2a40e18e5ae3de0213a2.png",
+    "static/media/digitalnotebook_resized.png": "/Portfolio/static/media/digitalnotebook_resized.2bbdc899cb36aeed57ef.png",
+    "static/media/Howard University-05.jpg": "/Portfolio/static/media/Howard University-05.5ae6b911edc098287b5d.jpg",
+    "static/media/professional.jpg": "/Portfolio/static/media/professional.edb4c777e3ca83bb5ee4.jpg",
+    "index.html": "/Portfolio/index.html",
+    "main.adeebecb.css.map": "/Portfolio/static/css/main.adeebecb.css.map",
+    "main.869973b3.js.map": "/Portfolio/static/js/main.869973b3.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adeebecb.css",
+    "static/js/main.869973b3.js"
+  ]
+}
