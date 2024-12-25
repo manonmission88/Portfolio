@@ -1,6 +1,5 @@
 {
-  
-  "homepage" : "https://manonmission88.github.io/Porfolio/",
+  "homepage": "https://manonmission88.github.io/Portfolio/",
   "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
@@ -28,7 +27,6 @@
     "webpack": "^5.97.1"
   },
   "scripts": {
-    
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
