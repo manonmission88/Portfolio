@@ -28,7 +28,7 @@ function Home() {
 
                 <p className="description">{textData.description}</p>
                 <p className="slogan">
-                    I live by the saying, <strong>‘Fear is the only enemy’</strong> or in Sanskrit,
+                    I live by the saying, <strong>‘FEAR IS THE ONLY ENEMY’</strong> or in Sanskrit,
                     <strong> ‘भयेवास्ति शत्रुः’ (Bhayebasti Shastru)</strong>, as it reminds me to face challenges with courage and curiosity.
                 </p>
                 <div className="social-media">

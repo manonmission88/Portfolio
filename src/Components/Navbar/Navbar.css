@@ -1,5 +1,3 @@
-/* RESET & BASE STYLES */
-
 /* NAVBAR CONTAINER */
 .navbar {
     position: fixed;
@@ -13,10 +11,9 @@
     background-color: rgba(255, 255, 255, 0.12);
 
     /* Spacing & Layout */
-    width: calc(100% - 40px);
-    /* Leaves a little margin on mobile */
+    width: calc(100% - 30px);
     max-width: 600px;
-    height: 40px;;
+    height: 50px;
     padding: 15px 20px;
     border-radius: 40px;
     border: 1px solid grey;
@@ -28,22 +25,20 @@
 
     /* Depth & Shadows */
     z-index: 1000;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
-        rgba(0, 0, 0, 0.06) 0 2px 4px -1px; */
     box-shadow: 0 4px 6px rgba(65, 58, 58, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    /* Slightly more transparent on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    /* Slightly deeper shadow on hover */
 }
+
 /* LOGO AREA */
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    /* You can add actual text or an image logo here */
+    color: black;
 }
 
 /* NAV LINKS */
@@ -51,20 +46,25 @@
     display: flex;
     list-style: none;
     gap: 15px;
-    /* Spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navlinks ul li {
+    font-weight: bold;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    /* Prevents text wrapping */
 }
 
 .navbar .navlinks ul li a {
     text-decoration: none;
     color: black;
-    /* Use a solid color to ensure visibility */
-    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .navbar .navlinks ul li a:hover {
     color: #4b9cea;
-    /* Hover color */
 }
 
 /* BUTTON AREA */
@@ -78,7 +78,7 @@
 
 /* RESPONSIVE BREAKPOINTS */
 
-/* Tablet-ish screens and smaller (max-width: 768px) */
+/* Tablet screens and smaller (max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
         top: 5px;
@@ -86,16 +86,22 @@
         border-radius: 20px;
     }
 
-    /* Logo slightly smaller text */
     .navbar .logo {
         font-size: 1.2rem;
     }
 
-    /* Adjust gap or make items stack */
     .navbar .navlinks ul {
         flex-wrap: wrap;
-        /* Allows items to wrap onto a new line */
         justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar .navlinks ul li {
+        font-size: 0.85rem;
+    }
+
+    .navbar .btn1 {
+        font-size: 1.3rem;
     }
 }
 
@@ -111,13 +117,16 @@
         font-size: 1rem;
     }
 
-    /* Stack items in a column if you prefer */
     .navbar .navlinks ul {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    /* Adjust button size for smaller screens */
+    .navbar .navlinks ul li {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
     .navbar .btn1 {
         font-size: 1.2rem;
     }

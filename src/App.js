@@ -8,6 +8,7 @@ import Project from './Components/Navbar/projects/Projects';
 import Experience from './Components/Navbar/experience/Experience';
 import ExtraCurricular from './Components/Navbar/extraCurricular/ExtraCurricular';
 import ContactSection from './Components/Navbar/contact/ContactSection';
+import Gallery from './Components/Navbar/gallery/Gallery';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path='/projects' element={<Project />} />
           <Route path='/experience' element={<Experience />} />
           <Route path='/extracurricular' element={<ExtraCurricular />} />
+          <Route path='/gallery' element={<Gallery />} />
           <Route path='/contact' element={<ContactSection />} />
 
         </Routes>

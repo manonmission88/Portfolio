@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactSection.css";
+import transition from '../../../transition';
 
 const ContactSection = () => {
     return (
@@ -78,4 +79,4 @@ const ContactSection = () => {
     );
 };
 
-export default ContactSection;
+export default transition(ContactSection);

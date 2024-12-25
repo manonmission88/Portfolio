@@ -1,5 +1,5 @@
 import React from 'react';
-import myResume from './MANISH_NIURE__RESUME.pdf'
+import myResume from './updated_niure_manish_resume_swe.pdf';
 import './resume.css'
 import transition from '../../../transition';
 

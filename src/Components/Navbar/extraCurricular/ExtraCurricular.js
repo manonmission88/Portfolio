@@ -1,6 +1,7 @@
 import React from "react";
 import { extracurriculars } from "./ExtraCurricularData"; // Import data
 import "./ExtraCurricular.css"; // Import CSS
+import transition from '../../../transition';
 
 const ExtraCurricular = () => {
     return (
@@ -26,4 +27,4 @@ const ExtraCurricular = () => {
     );
 };
 
-export default ExtraCurricular;
+export default transition(ExtraCurricular);

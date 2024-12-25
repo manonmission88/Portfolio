@@ -2,6 +2,7 @@ import React from "react";
 import { experiences } from "./ExperienceData";
 import { Meta, Aws } from "@lobehub/icons"; // Icons for Meta and AWS
 import howardUniversity from '../../asset/Howard University-05.jpg';
+import transition from '../../../transition';
 import "./Experience.css";
 
 // Helper function to dynamically get the icon or image based on the company name
@@ -75,4 +76,4 @@ const Experience = () => {
     );
 };
 
-export default Experience;
+export default transition(Experience);

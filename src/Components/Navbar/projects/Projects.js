@@ -1,6 +1,7 @@
 import React from 'react';
 import { projectData } from './projectData'; // Ensure path is correct
 import ProjectCard from './ProjectCard';
+import transition from '../../../transition';
 import './Projects.css';
 
 function Projects() {
@@ -22,4 +23,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default transition(Projects);
