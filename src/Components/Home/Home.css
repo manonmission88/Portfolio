@@ -1,59 +1,146 @@
+/* Main container */
 .Home {
     position: relative;
     display: flex;
     margin-top: 120px;
     justify-content: center;
-    height: 100%;
+    align-items: flex-start;
     color: var(--text-color);
     overflow: hidden;
-    /* Use the background color variable */
+    padding: 2rem;
 }
 
+/* Profile picture styling */
 .profile-pic {
-    padding: 5px;
-    width: 367px;
-    height: 440px;
-    margin-left: 200px;
-    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.description {
-    margin-top: 70px;
-    text-align: justify;
+
+/* Content container */
+.content {
+    max-width: 700px;
     text-align: left;
 }
 
-.content {
-    margin-left: 20px;
-    margin-top: 20px;
-    text-align: left;
-    width: 700px;
+/* Word Pull-Up Animation */
+.word-pull-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
+
+/* Each word styling */
+.animated-word {
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+/* Each letter styling */
+.animated-letter {
+    display: inline-block;
+    transform: translateY(100%);
+    animation: pullUp 0.8s ease forwards;
+}
+
+/* Sequential animation delays */
+.animated-letter:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.animated-letter:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.animated-letter:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.animated-letter:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.animated-letter:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+/* Add more nth-child selectors as needed */
+
+/* Space between words */
+.space {
+    width: 0.3rem;
+}
+
+/* Animation Keyframes */
+@keyframes pullUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* Description styling */
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary-color);
+}
+
+/* Slogan styling */
+.slogan {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary-color);
+    margin-top: 1rem;
+}
+
+.slogan strong {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Social media section */
 .social-media {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* Space between the logos */
-    margin-top: 60px;
+    margin-top: 2rem;
 }
 
+/* Social media icons */
 .social-logo {
     width: 40px;
     height: 40px;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer;
 }
 
+/* Rotate icons on hover */
 .social-media a:hover .social-logo {
-    transform: scale(1.1);
-    /* Slightly enlarge the logo on hover */
+    transform: rotate(360deg);
 }
 
-.icon {
-    font-size: 2rem;
-    margin: 10px;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-.icon:hover {
-    color: var(--light-green);
+/* Root variables */
+:root {
+    --primary-color: #0a5fb4;
+    --text-color: #333;
+    --text-secondary-color: #555;
 }
