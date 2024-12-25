@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'
+import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Resume from './Components/Navbar/resume/resume';
 import Home from './Components/Home/Home';
@@ -9,7 +9,6 @@ import Experience from './Components/Navbar/experience/Experience';
 import ExtraCurricular from './Components/Navbar/extraCurricular/ExtraCurricular';
 import ContactSection from './Components/Navbar/contact/ContactSection';
 import Gallery from './Components/Navbar/gallery/Gallery';
-
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -31,18 +30,17 @@ function App() {
   }, [mode]);
 
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <div className="App">
         <Navbar mode={mode} toggleMode={toggleMode} />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/resume' element={<Resume />} />
-          <Route path='/projects' element={<Project />} />
-          <Route path='/experience' element={<Experience />} />
-          <Route path='/extracurricular' element={<ExtraCurricular />} />
-          <Route path='/gallery' element={<Gallery />} />
-          <Route path='/contact' element={<ContactSection />} />
-
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/projects" element={<Project />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/extracurricular" element={<ExtraCurricular />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<ContactSection />} />
         </Routes>
       </div>
     </Router>
