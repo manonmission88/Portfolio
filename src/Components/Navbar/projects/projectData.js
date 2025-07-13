@@ -30,7 +30,7 @@ const projectData = [
         img: pokedex,
         name: "Pokedex CLI Game",
         stack: ["Go", "CLI", "REST API", "REPL"],
-        source: "https://github.com/manonmission88/pokedex-cli-game", // Replace with actual GitHub link
+        source: "https://github.com/manonmission88/PokeGoCli", // Replace with actual GitHub link
         description: "Developed an interactive command-line Pokemon game in Go with a REPL interface for exploring regions, catching, and inspecting Pokemon using live API data. Implemented in-memory caching and pagination to optimize API usage, reduce latency, and improve memory efficiency across sessions.",
     },
     {
