@@ -35,12 +35,12 @@ function App() {
         <Navbar mode={mode} toggleMode={toggleMode} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/extracurricular" element={<ExtraCurricular />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactSection />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>
     </Router>

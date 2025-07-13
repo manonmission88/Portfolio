@@ -104,6 +104,76 @@
     color: var(--text-secondary-color);
 }
 
+/* Inline Paper Link Styling */
+.inline-paper-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    background: linear-gradient(135deg, var(--primary-color), #0d7377);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+.inline-paper-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, var(--primary-color), #0d7377);
+    transition: width 0.3s ease;
+}
+
+.inline-paper-link:hover {
+    transform: translateY(-1px);
+}
+
+.inline-paper-link:hover::after {
+    width: 100%;
+}
+
+/* Company Highlight Styling */
+.company-highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), #0d7377);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+    text-shadow: 0 0 10px rgba(10, 95, 180, 0.3);
+}
+
+.company-highlight::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(135deg, var(--primary-color), #0d7377);
+    opacity: 0.6;
+    border-radius: 2px;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
 /* Slogan styling */
 .slogan {
     font-size: 1.1rem;
@@ -143,4 +213,51 @@
     --primary-color: #0a5fb4;
     --text-color: #333;
     --text-secondary-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Home {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-top: 80px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .word-pull-up {
+        font-size: 2rem;
+        justify-content: center;
+    }
+
+    .description {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .word-pull-up {
+        font-size: 1.5rem;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
 }

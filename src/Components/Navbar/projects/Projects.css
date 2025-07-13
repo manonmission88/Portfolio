@@ -10,26 +10,48 @@
     margin-bottom: 50px;
 }
 
-/* CSS Grid layout for 3 cards per row */
+/* CSS Grid layout for evenly distributed cards */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 equal-width columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    /* Adjust the space between cards */
+    justify-items: center;
+    align-items: start;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 /* Ensure the layout adjusts for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 1400px) {
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 equal columns on medium screens */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+        max-width: 1400px;
     }
 }
 
-@media (max-width: 700px ) {
+@media (max-width: 1100px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+        max-width: 100%;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
-        /* 1 card per row on small screens */
+        gap: 15px;
+        padding: 0;
     }
 }

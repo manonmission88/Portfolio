@@ -22,13 +22,14 @@ const ContactSection = () => {
                         <div className="detail-item">
                             <div className="icon-container">📞</div>
                             <div>
-                                <h4>+1 (202) 696-7172</h4>
+                                <h4>+1</h4>
                             </div>
                         </div>
                         <div className="detail-item">
                             <div className="icon-container">📧</div>
                             <div>
                                 <h4>manish.niure@bison.howard.edu</h4>
+                                <h4>manishnewray88@gmail.com</h4>
                             </div>
                         </div>
                     </div>

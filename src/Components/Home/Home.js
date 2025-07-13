@@ -26,7 +26,7 @@ function Home() {
                     ))}
                 </div>
 
-                <p className="description">{textData.description}</p>
+                <p className="description" dangerouslySetInnerHTML={{ __html: textData.description }}></p>
                 <p className="slogan">
                     I live by the saying, <strong>‘FEAR IS THE ONLY ENEMY’</strong> or in Sanskrit,
                     <strong> ‘भयेवास्ति शत्रुः’ (Bhayebasti Shastru)</strong>, as it reminds me to face challenges with courage and curiosity.

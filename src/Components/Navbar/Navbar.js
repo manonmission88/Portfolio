@@ -15,9 +15,7 @@ function Navbar({ mode, toggleMode }) {
                     <li>
                         <Icon icon="fa6-solid:house" color="#0078FF" /> <Link to="/">Home</Link>
                     </li>
-                    <li>
-                        <Icon icon="fa6-solid:file-lines" color="#00C853" /> <Link to="/resume">Resume</Link>
-                    </li>
+        
                     <li>
                         <Icon icon="fa6-solid:folder" color="#FFC107" /> <Link to="/projects">Projects</Link>
                     </li>
@@ -26,6 +24,9 @@ function Navbar({ mode, toggleMode }) {
                     </li>
                     <li>
                         <Icon icon="fa6-solid:graduation-cap" color="#6A1B9A" /> <Link to="/extracurricular">ExtraCurricular</Link>
+                    </li>
+                    <li>
+                        <Icon icon="fa6-solid:file-lines" color="#00C853" /> <Link to="/resume">Resume</Link>
                     </li>
                     <li>
                         <Icon icon="mdi:camera-image" color="#D500F9" /> <Link to="/gallery">Gallery</Link>

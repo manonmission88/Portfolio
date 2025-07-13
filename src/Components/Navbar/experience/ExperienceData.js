@@ -2,22 +2,22 @@ export const experiences = {
     employment: [
         {
             company: "Meta",
-            role: "Software Engineer Intern, Menlo Park, CA",
+            role: "Software Engineer Intern - ENT framework, Menlo Park, CA",
             date: "May 2024 - Aug 2024",
             details: [
-                "Developed and optimized an API for internal testing using PHP on the EntFramework Infrastructure Team, ensuring robust validation and data integrity across diverse storage systems like TAO, ZippyDB for social graphs.",
-                "Expanded API adoption, with over 40% of engineers at Meta utilizing it for testing their data across all major platforms, streamlining workflows and boosting productivity.",
-                "Collaborated closely with senior engineers to design and implement a solution."
+                "Built and optimized a code generation API in PHP/Hack within Meta's EntFramework to streamline test case creation and validation for backend systems like TAO and ZippyDB, enabling efficient testing of social graph data used by internal platforms.",
+                "Boosted API adoption by over 40% among Meta engineers, streamlining data testing workflows across key platforms and improving engineering productivity.",
+                "Partnered with senior engineers to architect and deploy a scalable API solution, meeting complex system requirements and ensuring seamless integration with existing Meta infrastructure."
             ]
         },
         {
-            company: "Amazon Web Service",
-            role: "Software Development Engineer Intern, East Palo Alto, CA",
+            company: "Amazon",
+            role: "Software Development Engineer Intern - AWS Lake Formation, East Palo Alto, CA",
             date: "May 2023 - Aug 2023",
             details: [
-                "Actively collaborated with the AWS LakeFormation team, contributing to multiple pivotal projects by leveraging Java, Python, and Ruby in AWS environments.",
-                "Utilized Python and Ruby to automate the deployment process step Model Change Management (MCM), reducing the creation time from 3 hours to just 5 minutes and increasing the efficiency by 95%.",
-                "Updated the API by integrating a timestamp feature into data cell filters using Java, enhancing data traceability and strengthening platform data integrity."
+                "Utilized Python and Ruby to build an automated deployment pipeline for Model Change Management (MCM), cutting execution time by 95% and making infrastructure workflows more efficient.",
+                "Added timestamp support to data cell filters with Java, which improved data traceability and fine grained access control in AWS Lake Formation.",
+                "Developed and supported backend features using Java, Python, and Ruby in AWS, working directly with services like IAM, CloudFormation, and Lake Formation."
             ]
         },
         {
@@ -34,11 +34,12 @@ export const experiences = {
     research: [
         {
             company: "Howard University",
-            role: "Research Assistant, Washington, DC",
-            date: "Oct 2023 - Dec 2024",
+            role: "Research Assistant - Phase Based Motion Processing, Washington, DC",
+            date: "Oct 2023 - April 2024",
             details: [
-                "Implemented phased based video motion algorithms in C++ and MATLAB to process large video datasets, enabling the detection of subtle motions in physical infrastructure.",
-                "Optimized video processing efficiency, reducing computation time by 20%, enabling real-time monitoring for potential structural failures."
+                "Developed and implemented video motion algorithms in C++ and MATLAB for processing large scale video datasets, facilitating the detection of subtle infrastructural changes.",
+                "Enhanced video processing pipeline efficiency, achieving a 20% reduction in computation time and enabling near real-time monitoring for structural integrity.",
+                "Co-authored a published paper in the ASCE Library on video and signal processing for infrastructure monitoring."
             ]
         },
         {
