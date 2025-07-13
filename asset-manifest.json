@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.adeebecb.css",
-    "main.js": "/Portfolio/static/js/main.848e8aee.js",
+    "main.css": "/Portfolio/static/css/main.3b6a3b71.css",
+    "main.js": "/Portfolio/static/js/main.ba36a0be.js",
     "static/js/453.0a7f0965.chunk.js": "/Portfolio/static/js/453.0a7f0965.chunk.js",
     "static/media/freshman_howard.jpg": "/Portfolio/static/media/freshman_howard.6af87e6132916d3f1610.jpg",
+    "static/media/pokedoxcli.png": "/Portfolio/static/media/pokedoxcli.0c26164f87f39fc68c81.png",
     "static/media/side-quest.png": "/Portfolio/static/media/side-quest.fbf4447055b8696d3dc9.png",
     "static/media/group.JPG": "/Portfolio/static/media/group.248fe09e9c46e894c7b8.JPG",
     "static/media/google_hbcu_hackathon.png": "/Portfolio/static/media/google_hbcu_hackathon.72bf90f50fb17d7a002f.png",
     "static/media/meta-abcs.png": "/Portfolio/static/media/meta-abcs.daf2fb49e3f0cac9d8e4.png",
     "static/media/localwiki.png": "/Portfolio/static/media/localwiki.67dfe2b315634f6865c5.png",
+    "static/media/guardianbot.png": "/Portfolio/static/media/guardianbot.f5524b28cb3d6f4422db.png",
     "static/media/soccer.jpeg": "/Portfolio/static/media/soccer.51b4e2f919aa5ea588ea.jpeg",
     "static/media/meta.jpeg": "/Portfolio/static/media/meta.c7a56eb0c5348655bd6f.jpeg",
     "static/media/chess.jpg": "/Portfolio/static/media/chess.aa9d86b40d62671b4594.jpg",
+    "static/media/mentoxy.png": "/Portfolio/static/media/mentoxy.9f2f797caac8cc0e2ea6.png",
     "static/media/market_madness.png": "/Portfolio/static/media/market_madness.263442151a59027b403e.png",
     "static/media/hiking1.jpg": "/Portfolio/static/media/hiking1.cef354738639ea587375.jpg",
     "static/media/hiking.jpeg": "/Portfolio/static/media/hiking.37fa5320e7247d2af5ff.jpeg",
@@ -27,12 +30,12 @@
     "static/media/Howard University-05.jpg": "/Portfolio/static/media/Howard University-05.5ae6b911edc098287b5d.jpg",
     "static/media/professional.jpg": "/Portfolio/static/media/professional.edb4c777e3ca83bb5ee4.jpg",
     "index.html": "/Portfolio/index.html",
-    "main.adeebecb.css.map": "/Portfolio/static/css/main.adeebecb.css.map",
-    "main.848e8aee.js.map": "/Portfolio/static/js/main.848e8aee.js.map",
+    "main.3b6a3b71.css.map": "/Portfolio/static/css/main.3b6a3b71.css.map",
+    "main.ba36a0be.js.map": "/Portfolio/static/js/main.ba36a0be.js.map",
     "453.0a7f0965.chunk.js.map": "/Portfolio/static/js/453.0a7f0965.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.adeebecb.css",
-    "static/js/main.848e8aee.js"
+    "static/css/main.3b6a3b71.css",
+    "static/js/main.ba36a0be.js"
   ]
 }
