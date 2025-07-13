@@ -1,9 +1,134 @@
 .resumebox {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 90px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+    min-height: calc(100vh - 110px);
+}
+
+/* Admin Controls */
+.admin-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.admin-btn {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.admin-btn:hover:not(:disabled) {
+    background: #555;
+    transform: scale(1.1);
+}
+
+.admin-btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.resume-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
     justify-content: center;
-    margin-top: 70px;
-    margin-left: 140px;
-    /* Adjust margin top as needed */
-    width: 80%;
-    /* Adjust width as needed */
+    flex-wrap: wrap;
+}
+
+.upload-toggle-btn, .reset-btn, .exit-admin-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.upload-toggle-btn {
+    background: #007bff;
+    color: white;
+}
+
+.upload-toggle-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.reset-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.exit-admin-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.exit-admin-btn:hover {
+    background: #545b62;
+    transform: translateY(-2px);
+}
+
+.upload-section {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.file-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.upload-info {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resumebox {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px);
+        margin-top: 80px;
+        min-height: calc(100vh - 100px);
+    }
+    
+    .resume-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .upload-toggle-btn, .reset-btn, .exit-admin-btn {
+        width: 200px;
+    }
 }

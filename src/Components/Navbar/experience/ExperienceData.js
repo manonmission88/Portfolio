@@ -37,8 +37,8 @@ export const experiences = {
             role: "Research Assistant, Washington, DC",
             date: "Oct 2023 - Dec 2024",
             details: [
-                "Leveraged phase-based motion processing techniques using MATLAB and Python to detect subtle vibrations in physical infrastructure, invisible to the naked eye.",
-                "Contributed to determining the natural frequency of structures from the recorded video to assess potential failure risks."
+                "Implemented phased based video motion algorithms in C++ and MATLAB to process large video datasets, enabling the detection of subtle motions in physical infrastructure.",
+                "Optimized video processing efficiency, reducing computation time by 20%, enabling real-time monitoring for potential structural failures."
             ]
         },
         {

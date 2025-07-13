@@ -19,7 +19,6 @@
     /* Adjust the space between cards */
 }
 
-
 /* Ensure the layout adjusts for smaller screens */
 @media (max-width: 600px) {
     .portfolio-grid {
