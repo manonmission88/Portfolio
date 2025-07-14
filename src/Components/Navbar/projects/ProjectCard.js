@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProjectCard.css'; // Custom CSS
-import githubLogo from './github.png';
 
 function ProjectCard({ title, description, link, image, stack }) {
     return (
