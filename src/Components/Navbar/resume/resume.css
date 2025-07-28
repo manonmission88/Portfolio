@@ -48,7 +48,7 @@
     flex-wrap: wrap;
 }
 
-.upload-toggle-btn, .reset-btn, .exit-admin-btn {
+.upload-toggle-btn, .url-update-btn, .reset-btn, .exit-admin-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -65,6 +65,16 @@
 
 .upload-toggle-btn:hover {
     background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.url-update-btn {
+    background: #28a745;
+    color: white;
+}
+
+.url-update-btn:hover {
+    background: #218838;
     transform: translateY(-2px);
 }
 
@@ -111,6 +121,23 @@
     color: #666;
     font-size: 14px;
     margin: 0;
+}
+
+.resume-status {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.status-info {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #495057;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    border: 1px solid #dee2e6;
 }
 
 /* Responsive adjustments */

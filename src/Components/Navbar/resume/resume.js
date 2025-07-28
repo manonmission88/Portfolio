@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import myResume from './updated_niure_manish_resume_swe.pdf';
+import myResume from './niure_manish_2025.pdf';
 import './resume.css'
 import transition from '../../../transition';
 
@@ -9,15 +9,22 @@ function Resume() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [attemptCount, setAttemptCount] = useState(0);
     const [isBlocked, setIsBlocked] = useState(false);
+    const [useCloudResume, setUseCloudResume] = useState(false);
 
     useEffect(() => {
         // Check for uploaded resume in localStorage
         const uploadedResume = localStorage.getItem('uploadedResume');
-        if (uploadedResume) {
+        const cloudResumeUrl = localStorage.getItem('cloudResumeUrl');
+        const useCloud = localStorage.getItem('useCloudResume') === 'true';
+        
+        if (useCloud && cloudResumeUrl) {
+            setCurrentResume(cloudResumeUrl);
+            setUseCloudResume(true);
+        } else if (uploadedResume) {
             setCurrentResume(uploadedResume);
         }
 
-        // Check if admin mode is enabled (you can set this with a secret key)
+        // Check if admin mode is enabled
         const adminMode = localStorage.getItem('adminMode');
         setIsAdmin(adminMode === 'true');
 
@@ -42,7 +49,9 @@ function Resume() {
             reader.onload = (e) => {
                 const base64String = e.target.result;
                 localStorage.setItem('uploadedResume', base64String);
+                localStorage.setItem('useCloudResume', 'false');
                 setCurrentResume(base64String);
+                setUseCloudResume(false);
                 setShowUpload(false);
                 alert('Resume updated successfully!');
             };
@@ -50,6 +59,26 @@ function Resume() {
         } else {
             alert('Please select a valid PDF file.');
         }
+    };
+
+    const handleUrlUpdate = () => {
+        const url = prompt('Enter the new resume URL (Google Drive, Dropbox, etc.):');
+        if (url && url.trim()) {
+            localStorage.setItem('cloudResumeUrl', url.trim());
+            localStorage.setItem('useCloudResume', 'true');
+            setCurrentResume(url.trim());
+            setUseCloudResume(true);
+            alert('Resume URL updated successfully!');
+        }
+    };
+
+    const resetToDefaultResume = () => {
+        localStorage.removeItem('uploadedResume');
+        localStorage.removeItem('cloudResumeUrl');
+        localStorage.setItem('useCloudResume', 'false');
+        setCurrentResume(myResume);
+        setUseCloudResume(false);
+        alert('Reset to default resume!');
     };
 
     const enableAdminMode = () => {
@@ -89,9 +118,7 @@ function Resume() {
     };
 
     const resetToDefault = () => {
-        localStorage.removeItem('uploadedResume');
-        setCurrentResume(myResume);
-        alert('Reset to default resume!');
+        resetToDefaultResume();
     };
 
     const exitAdminMode = () => {
@@ -123,7 +150,13 @@ function Resume() {
                         onClick={() => setShowUpload(!showUpload)}
                         className="upload-toggle-btn"
                     >
-                        {showUpload ? 'Cancel' : 'Update Resume'}
+                        {showUpload ? 'Cancel' : 'Upload New Resume'}
+                    </button>
+                    <button 
+                        onClick={handleUrlUpdate}
+                        className="url-update-btn"
+                    >
+                        Update Resume URL
                     </button>
                     <button onClick={resetToDefault} className="reset-btn">
                         Reset to Default
@@ -142,11 +175,39 @@ function Resume() {
                         onChange={handleFileUpload}
                         className="file-input"
                     />
-                    <p className="upload-info">Select a PDF file to update your resume</p>
+                    <p className="upload-info">Select a PDF file to upload</p>
                 </div>
             )}
 
-            <embed src={currentResume} type="application/pdf" width="100%" height="1200px" style={{minHeight: '1200px'}} />
+            <div className="resume-status">
+                {useCloudResume && (
+                    <p className="status-info">📡 Using cloud resume from URL</p>
+                )}
+                {!useCloudResume && currentResume !== myResume && (
+                    <p className="status-info">📁 Using uploaded resume</p>
+                )}
+                {currentResume === myResume && (
+                    <p className="status-info">📄 Using default resume</p>
+                )}
+            </div>
+
+            {useCloudResume ? (
+                <iframe 
+                    src={currentResume} 
+                    width="100%" 
+                    height="1200px" 
+                    style={{minHeight: '1200px', border: 'none'}}
+                    title="Resume"
+                />
+            ) : (
+                <embed 
+                    src={currentResume} 
+                    type="application/pdf" 
+                    width="100%" 
+                    height="1200px" 
+                    style={{minHeight: '1200px'}} 
+                />
+            )}
         </div>
     );
 }
