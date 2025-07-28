@@ -10,6 +10,14 @@ import guardianBot from './images/guardianbot.png'
 
 const projectData = [
     {
+        id: "project-0",
+        img: customShell, // Using shell image as placeholder for CLI tool
+        name: "Blog Aggregator (GitHub Repo)",
+        stack: ["Go", "PostgreSQL", "sqlc", "goose", "RSS", "CLI"],
+        source: "https://github.com/manonmission88/blog-aggregator", // Replace with actual GitHub link
+        description: "Developed a command-line RSS aggregator in Go with functionality to follow/unfollow feeds and view summaries or full articles directly in the terminal. Utilized PostgreSQL with sqlc and goose for migrations and type-safe queries; implemented scheduled background tasks for fetching, parsing, and deduplicating feed data.",
+    },
+    {
         id: "project-1",
         img: mentoxy, // Using existing image, you can replace with actual Mentoxy image
         name: "Mentoxy (Website)",

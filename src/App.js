@@ -30,7 +30,7 @@ function App() {
   }, [mode]);
 
   return (
-    <Router basename="/Portfolio">
+    <Router>
       <div className="App">
         <Navbar mode={mode} toggleMode={toggleMode} />
         <Routes>
