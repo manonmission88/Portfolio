@@ -9,6 +9,10 @@ import Experience from './Components/Navbar/experience/Experience';
 import ExtraCurricular from './Components/Navbar/extraCurricular/ExtraCurricular';
 import ContactSection from './Components/Navbar/contact/ContactSection';
 import Gallery from './Components/Navbar/gallery/Gallery';
+import ParticleBackground from './Components/ParticleBackground/ParticleBackground';
+import BackgroundShapes from './Components/BackgroundShapes/BackgroundShapes';
+import AIAgent from './Components/AIAgent/AIAgent';
+import FloatingActionButton from './Components/FloatingActionButton/FloatingActionButton';
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -32,6 +36,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <BackgroundShapes />
+        <ParticleBackground />
         <Navbar mode={mode} toggleMode={toggleMode} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -42,6 +48,8 @@ function App() {
           <Route path="/contact" element={<ContactSection />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
+        <AIAgent />
+        <FloatingActionButton />
       </div>
     </Router>
   );

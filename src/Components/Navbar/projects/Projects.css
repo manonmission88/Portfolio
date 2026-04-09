@@ -1,57 +1,70 @@
+/* ===== PROJECTS SECTION ===== */
 .projects-section {
-    padding: 60px 20px;
-    margin-top: 100px;
+    margin: 100px var(--space-xl) var(--space-xl);
+    padding: var(--space-3xl) var(--space-2xl);
+
+    background: var(--card-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
 }
 
-.projects-title {
-    color: #ffffff;
+/* Section heading */
+.projects-section-header {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: var(--space-2xl);
 }
 
-/* CSS Grid layout for evenly distributed cards */
+.projects-section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+    margin: 0 0 10px;
+}
+
+.projects-section-header p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ===== GRID ===== */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    align-items: start;
-    max-width: 1600px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
-}
-
-/* Ensure the layout adjusts for smaller screens */
-@media (max-width: 1400px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 18px;
-        max-width: 1400px;
-    }
 }
 
 @media (max-width: 1100px) {
     .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 16px;
-        max-width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 15px;
-        max-width: 100%;
-        padding: 0 5px;
+@media (max-width: 680px) {
+    .projects-section {
+        margin: 90px var(--space-md) var(--space-md);
+        padding: var(--space-2xl) var(--space-lg);
     }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .projects-section-header h2 { font-size: 1.9rem; }
 }
 
 @media (max-width: 480px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 0;
+    .projects-section {
+        margin: 80px var(--space-sm) var(--space-sm);
+        padding: var(--space-xl) var(--space-md);
     }
 }

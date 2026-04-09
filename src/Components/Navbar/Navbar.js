@@ -9,7 +9,11 @@ function Navbar({ mode, toggleMode }) {
 
     return (
         <nav className="navbar">
-            <div className="logo"></div>
+            <div className="logo">
+                <Link to="/">
+                    <span className="logo-text">Portfolio</span>
+                </Link>
+            </div>
             <div className="navlinks">
                 <ul>
                     <li>

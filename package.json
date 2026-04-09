@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@google/generative-ai": "^0.24.1",
     "@lobehub/icons": "^1.58.2",
     "@material-tailwind/react": "^2.1.9",
     "@mui/material": "^6.1.0",
@@ -31,7 +32,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "setup-gemini": "node setup-gemini.js"
   },
   "eslintConfig": {
     "extends": [

@@ -1,42 +1,236 @@
 :root {
-  --background-light: #ffffff;
-  --background-dark: #1a1a1a;
-  --background-dark-hover: #141414;
-  --text-light: #000000;
-  /* Black color for text */
-  --text-dark: #ffffff;
-  /* White color for text */
-  --primary-color: #a3d5ff;
-  /* Light blue color */
-  --Snow: #FFFAFA;
-  --LightGray: #D3D3D3;
-  --DeepNightBlack: #2C2C2C;
-  --light-green: #90ee90;
-  /* Light green color */
+  /* === COLOR SYSTEM === */
+  --background-light: #f0f4ff;
+  --background-dark: #06091a;
+
+  --text-light: #0f172a;
+  --text-dark: #e2e8f0;
+  --text-secondary-light: #475569;
+  --text-secondary-dark: #94a3b8;
+
+  /* Brand Palette */
+  --primary-50: #eef2ff;
+  --primary-100: #e0e7ff;
+  --primary-200: #c7d2fe;
+  --primary-300: #a5b4fc;
+  --primary-400: #818cf8;
+  --primary-500: #6366f1;
+  --primary-600: #4f46e5;
+  --primary-700: #4338ca;
+  --primary-800: #3730a3;
+  --primary-900: #312e81;
+
+  /* Accent Colors */
+  --accent-cyan: #22d3ee;
+  --accent-violet: #a78bfa;
+  --accent-pink: #f472b6;
+  --accent-emerald: #34d399;
+  --accent-amber: #fbbf24;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a78bfa 100%);
+  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #6366f1 100%);
+  --gradient-warm: linear-gradient(135deg, #f472b6 0%, #fbbf24 100%);
+  --gradient-cool: linear-gradient(135deg, #34d399 0%, #22d3ee 100%);
+  --gradient-hero: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #a78bfa 100%);
+
+  /* Glassmorphism */
+  --glass-bg-light: rgba(255, 255, 255, 0.7);
+  --glass-bg-dark: rgba(10, 15, 40, 0.65);
+  --glass-border-light: rgba(255, 255, 255, 0.8);
+  --glass-border-dark: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.25);
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Active theme */
   --background-color: var(--background-light);
-  /* Default background color */
-  --primary-background-light: #e0f7ff;
-  /* Very light blue color for light mode */
-  --primary-background-dark: #1a1a1a;
-  /* Dark background color for dark mode */
+  --text-color: var(--text-light);
+  --text-secondary: var(--text-secondary-light);
+  --primary-color: var(--primary-500);
+  --glass-bg: var(--glass-bg-light);
+  --glass-border: var(--glass-border-light);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(255, 255, 255, 0.9);
 }
 
+/* ===== LIGHT MODE ===== */
 body.light-mode {
-  --background-color: var(--primary-background-light);
+  --background-color: var(--background-light);
   --text-color: var(--text-light);
-  /* Use text-light for light mode */
+  --text-secondary: var(--text-secondary-light);
+  --primary-color: var(--primary-500);
+  --glass-bg: var(--glass-bg-light);
+  --glass-border: var(--glass-border-light);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(255, 255, 255, 0.95);
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --primary-color: var(--primary-400);
+  --glass-bg: var(--glass-bg-dark);
+  --glass-border: var(--glass-border-dark);
+  --card-bg: rgba(15, 23, 50, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== BASE BODY ===== */
+body {
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  transition: background var(--transition-slow), color var(--transition-normal);
+
+  /* Light mode background — very subtle, text-friendly */
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 10%, rgba(34, 211, 238, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(167, 139, 250, 0.04) 0%, transparent 60%),
+    linear-gradient(160deg, #f8f9ff 0%, #f5f7ff 50%, #f8f9ff 100%);
+  background-attachment: fixed;
 }
 
 body.dark-mode {
-  --background-color: var(--primary-background-dark);
-  --text-color: var(--text-dark);
-  /* Use text-dark for dark mode */
+  /* Dark mode background — deep, subtle glow */
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(99, 102, 241, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 15%, rgba(34, 211, 238, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 45% 85%, rgba(167, 139, 250, 0.08) 0%, transparent 55%),
+    linear-gradient(160deg, #08091c 0%, #0c1028 40%, #08091c 100%);
+  background-attachment: fixed;
 }
 
-body {
-  background-color: var(--background-color);
+/* Animated floating orbs overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.02) 0%, transparent 35%);
+  z-index: -1;
+  animation: ambientPulse 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+body.dark-mode::before {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.05) 0%, transparent 35%);
+}
+
+@keyframes ambientPulse {
+  0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.03) rotate(1deg); }
+  100% { opacity: 0.7; transform: scale(0.98) rotate(-1deg); }
+}
+
+/* ===== BASE RESETS ===== */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { opacity: 0.8; }
+
+/* ===== SELECTION ===== */
+::selection {
+  background: rgba(99, 102, 241, 0.25);
   color: var(--text-color);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  margin: 0;
-  padding: 0;
+}
+
+/* ===== FOCUS STYLES ===== */
+*:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== SECTION WRAPPER ===== */
+.section-wrapper {
+  margin: 100px var(--space-xl) var(--space-xl);
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  padding: var(--space-3xl) var(--space-2xl);
+  transition: all var(--transition-normal);
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+/* ===== BADGE / TAG ===== */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--gradient-primary);
+  color: white;
+  letter-spacing: 0.02em;
 }

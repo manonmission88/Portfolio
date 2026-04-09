@@ -1,6 +1,6 @@
 import React from "react";
-import { extracurriculars } from "./ExtraCurricularData"; // Import data
-import "./ExtraCurricular.css"; // Import CSS
+import { extracurriculars } from "./ExtraCurricularData";
+import "./ExtraCurricular.css";
 import transition from '../../../transition';
 
 const ExtraCurricular = () => {
@@ -13,22 +13,22 @@ const ExtraCurricular = () => {
                         <div className="extracurricular-image">
                             <img src={activity.image} alt={activity.title} />
                         </div>
-                        <div className="extracurricular-date">({activity.date})</div>
-                        <h3 className="extracurricular-card-title">{activity.title}</h3>
-                        <h4 className="extracurricular-card-role">{activity.role}</h4>
-                        <p className="extracurricular-card-description">
-                            {activity.description}
-                        </p>
-                        {activity.link && (
-                            <a 
-                                href={activity.link} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="extracurricular-link"
-                            >
-                                View Details
-                            </a>
-                        )}
+                        <div className="extracurricular-card-body">
+                            <span className="extracurricular-date">{activity.date}</span>
+                            <h3 className="extracurricular-card-title">{activity.title}</h3>
+                            <p className="extracurricular-card-role">{activity.role}</p>
+                            <p className="extracurricular-card-description">{activity.description}</p>
+                            {activity.link && (
+                                <a
+                                    href={activity.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="extracurricular-link"
+                                >
+                                    View Details →
+                                </a>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
