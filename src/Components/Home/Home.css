@@ -160,12 +160,23 @@ body.dark-mode .social-media a:hover .social-logo {
     font-weight: 900;
     line-height: 1.15;
     overflow: hidden;
-    background: var(--gradient-hero);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-700, #1f2937);
     margin-bottom: var(--space-lg);
     letter-spacing: -0.03em;
+}
+
+@supports (-webkit-background-clip: text) {
+    .word-pull-up {
+        background: var(--gradient-hero);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.intro-line {
+    display: inline-block;
+    animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .animated-word {

@@ -37,14 +37,7 @@ function Home() {
             {/* Right column — content */}
             <div className="content">
                 <div className="word-pull-up">
-                    {textData.intro.split(" ").map((word, index) => (
-                        <span key={index} className="animated-word">
-                            {word.split("").map((letter, i) => (
-                                <span key={i} className="animated-letter">{letter}</span>
-                            ))}
-                            <span className="space">&nbsp;</span>
-                        </span>
-                    ))}
+                    <span className="intro-line">{textData.intro}</span>
                 </div>
 
                 <div className="subtitle-tags">
