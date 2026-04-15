@@ -1,7 +1,7 @@
 const textData = {
     name: "Manish Niure",
     intro: "Hi, My Name is Manish Niure!",
-    description: `I graduated from Howard University in May 2025 with a degree in Computer Science and am currently pursuing my <span class="company-highlight">Master of Science in Computer Science</span> at <span class="company-highlight">Texas A&amp;M University</span> in College Station, TX, with an expected graduation of May 2027.
+    description: `My name is Manish Niure. I graduated from Howard University in May 2025 with a degree in Computer Science and am currently pursuing my <span class="company-highlight">Master of Science in Computer Science</span> at <span class="company-highlight">Texas A&amp;M University</span> in College Station, TX, with an expected graduation of May 2027.
 
 I am passionate about using software engineering, machine learning, and computer vision to solve real-world challenges. During my undergraduate studies, I interned at <span class="company-highlight">Meta</span> and <span class="company-highlight">Amazon</span>, where I worked on scalable systems and contributed to tools used by thousands of engineers. I also <a href="https://ascelibrary.org/doi/10.1061/9780784486191.060" target="_blank" rel="noopener noreferrer" class="inline-paper-link">co-authored a research paper</a> on video and signal processing for infrastructure monitoring, which was selected for presentation at a national civil engineering conference.
 
