@@ -8,9 +8,28 @@ import mentoxy from './images/mentoxy.png'
 import pokedex from './images/pokedoxcli.png'
 import guardianBot from './images/guardianbot.png'
 
+const analogCodeMHeightPredictor = 'https://raw.githubusercontent.com/manonmission88/Analog-Code-mHeight-Predictor/main/NeuralNetworkArchitect.png'
+const ragSearchEngineOptimized = 'https://opengraph.githubassets.com/1/manonmission88/rag-search-engine-optimized'
+
 const projectData = [
     {
         id: "project-0",
+        img: ragSearchEngineOptimized,
+        name: "RAG Search Engine Optimized",
+        stack: ["Python", "RAG", "BM25", "CLIP", "Sentence Transformers"],
+        source: "https://github.com/manonmission88/rag-search-engine-optimized",
+        description: "A high-performance movie search engine that combines keyword search, semantic search, hybrid retrieval, multimodal search, and query enhancement. The project demonstrates a complete retrieval pipeline with BM25, vector search, reranking, and image-based search using CLIP and LLM-powered query refinement.",
+    },
+    {
+        id: "project-1",
+        img: analogCodeMHeightPredictor,
+        name: "Analog Code m-Height Predictor",
+        stack: ["Python", "Jupyter Notebook", "Neural Networks", "PyTorch"],
+        source: "https://github.com/manonmission88/Analog-Code-mHeight-Predictor",
+        description: "A compact, constraint-aware learning system for fast m-height prediction built around a multi-task ResNet architecture. The model uses Softplus and cumulative summation to enforce monotonic outputs while staying efficient at inference time and practical for reliability-sensitive prediction tasks.",
+    },
+    {
+        id: "project-2",
         img: customShell, // Using shell image as placeholder for CLI tool
         name: "Blog Aggregator (GitHub Repo)",
         stack: ["Go", "PostgreSQL", "sqlc", "goose", "RSS", "CLI"],
@@ -18,7 +37,7 @@ const projectData = [
         description: "Developed a command-line RSS aggregator in Go with functionality to follow/unfollow feeds and view summaries or full articles directly in the terminal. Utilized PostgreSQL with sqlc and goose for migrations and type-safe queries; implemented scheduled background tasks for fetching, parsing, and deduplicating feed data.",
     },
     {
-        id: "project-1",
+        id: "project-3",
         img: mentoxy, // Using existing image, you can replace with actual Mentoxy image
         name: "Mentoxy (Website)",
         stack: ["ReactJS", "HTML", "CSS", "JavaScript", "MySQL", "Figma"],
@@ -26,7 +45,7 @@ const projectData = [
         description: "Co-founded Mentoxy, a site to help students connect with mentors. Took the lead on building the front-end with ReactJS, HTML, CSS, and JavaScript, based on our Figma designs. Set up the MySQL database and built the main mentor matching system, focusing on making it user-friendly and keeping everyone's data secure.",
     },
     {
-        id: "project-2",
+        id: "project-4",
         img: guardianBot, // Using existing image, you can replace with actual Guardian Bot image
         name: "Guardian Bot: A TurtleBot Care Project",
         stack: ["Python", "C++", "ROS 2", "TurtleBot 4", "SLAM", "LiDAR"],
@@ -34,7 +53,7 @@ const projectData = [
         description: "Utilized TurtleBot 4 to simulate and implement an AI agent elderly care assistant with real-time monitoring. Developed SLAM-based mapping and autonomous navigation using TurtleBot 4's LiDAR, depth cameras, and IMU for obstacle avoidance and localization. Integrated ROS 2 framework with Python and C++ for sensor fusion, motion control, and decision-making in a healthcare assistance environment.",
     },
     {
-        id: "project-3",
+        id: "project-5",
         img: pokedex,
         name: "Pokedex CLI Game",
         stack: ["Go", "CLI", "REST API", "REPL"],
@@ -42,7 +61,7 @@ const projectData = [
         description: "Developed an interactive command-line Pokemon game in Go with a REPL interface for exploring regions, catching, and inspecting Pokemon using live API data. Implemented in-memory caching and pagination to optimize API usage, reduce latency, and improve memory efficiency across sessions.",
     },
     {
-        id: "project-4",
+        id: "project-6",
         img: customShell,
         name: "Custom Shell",
         stack: ["C"],
@@ -51,7 +70,7 @@ const projectData = [
             "The command shell I developed in C supports essential functionalities such as changing directories, handling signals like SIGINT, and providing a clean exit mechanism. Users can navigate the file system effortlessly using the cd command, while signal handling ensures proper termination of processes. Additionally, the shell allows users to exit gracefully using the exit command or Ctrl+D input. These features, along with support for job control and command history, contribute to a user-friendly and efficient command-line experience.",
     }, 
     {
-        id: "project-5",
+        id: "project-7",
         img: localWiki,
         name: "Local-Wiki-Project",
         stack: ["Python", "Flask", "HTML", "Javascript", "CSS", "Jinja"],
@@ -60,7 +79,7 @@ const projectData = [
             "The locally hosted wiki project We've developed boasts essential features for effortless content management. Users can easily navigate through pages, create, edit, and delete content, and search efficiently. The interface is intuitive, allowing users to seamlessly interact with the wiki. Additionally, the project includes robust security measures to protect user data and prevent unauthorized access. ",
     },
     {
-        id: "project-6",
+        id: "project-8",
         img: digitalNotebook,
         name: "Digital Notebook",
         stack: ["Python", "Tkinter", "SQLite"],
@@ -68,7 +87,7 @@ const projectData = [
         description: "A desktop app to keep track of assignments given by professors. Similar to the concept of maintaining homework notes in a physical diary, this app allows users to manage assignments digitally. Built with Tkinter for the frontend and SQLite for the backend, it offers a user-friendly interface for tracking assignments.",
     },
     {
-        id: "project-7",
+        id: "project-9",
         img: disasterTweet,
         name: "Disaster Tweet Classifier",
         stack: ["Python", "TensorFlow", "Pandas", "NumPy", "Scikit-learn"],
@@ -76,7 +95,7 @@ const projectData = [
         description: "Developed a disaster tweet classification model using TensorFlow, Scikit-learn, Pandas, and NumPy. Improved model accuracy through comprehensive hyperparameter tuning and tested various models, including CNN and SVM, to identify the most effective approach for classifying disaster-related tweets.",
     },
     {
-        id: "project-8",
+        id: "project-10",
         img: digitalCalulator,
         name: "Multi Functional Calculator",
         stack: ["Python", "Tkinter"],
