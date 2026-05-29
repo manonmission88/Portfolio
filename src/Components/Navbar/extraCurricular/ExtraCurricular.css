@@ -135,6 +135,7 @@ body.dark-mode .extracurricular-date {
     color: var(--text-secondary);
     line-height: 1.65;
     margin: 4px 0 0;
+    line-clamp: 3;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -168,9 +169,97 @@ body.dark-mode .extracurricular-date {
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
 }
 
+/* ===== CERTIFICATES SECTION ===== */
+.certificates-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 45px 0 20px;
+    text-align: center;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 28px 20px;
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-2xl);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-bounce);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.certificate-image-wrap {
+    width: 100%;
+    border-radius: calc(var(--radius-2xl) - 6px);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+.certificate-image {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: all var(--transition-slow);
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.certificate-card:hover .certificate-image-wrap {
+    background: transparent;
+}
+
+.certificate-card:hover .certificate-image {
+    height: auto;
+    object-fit: contain;
+}
+
+.certificate-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.certificate-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.4;
+    transition: color var(--transition-normal);
+}
+
+.certificate-card:hover .certificate-label {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 960px) {
-    .extracurricular-grid { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+    .certificates-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
 }
 
 @media (max-width: 768px) {
@@ -180,6 +269,11 @@ body.dark-mode .extracurricular-date {
     }
     .extracurricular-grid { grid-template-columns: 1fr; gap: 14px; }
     .extracurricular-title { font-size: 1.9rem; }
+    .certificates-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .certificate-card { padding: 18px 14px 20px; }
+    .certificate-image { height: 140px; }
+    .certificate-card:hover .certificate-image { height: auto; }
+    .certificate-icon { font-size: 2.5rem; }
 }
 
 @media (max-width: 480px) {
@@ -188,4 +282,11 @@ body.dark-mode .extracurricular-date {
         padding: var(--space-xl) var(--space-md);
     }
     .extracurricular-image { height: 140px; }
+    .certificates-subtitle { font-size: 1.25rem; margin: 35px 0 16px; }
+    .certificates-grid { grid-template-columns: 1fr; gap: 12px; }
+    .certificate-card { padding: 16px 12px 18px; }
+    .certificate-image { height: 124px; }
+    .certificate-card:hover .certificate-image { height: auto; }
+    .certificate-icon { font-size: 2rem; }
+    .certificate-label { font-size: 0.9rem; }
 }

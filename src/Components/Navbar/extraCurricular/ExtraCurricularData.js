@@ -4,6 +4,23 @@ import marketMadness from './images/market_madness.png';
 import googleHackathon from './images/google_hbcu_hackathon.png';
 import googleCoding from './images/google_coding_challenge.png';
 import bisonHacks from './images/bison_hack.png';
+import udacityCertificate from './images/udacity.png';
+import codepathCertificate from './images/codepath.png';
+
+export const certificates = [
+    {
+        title: "AWS AI Practitioner Challenge",
+        file: "/Certificate.pdf",
+        icon: "🏆",
+        image: udacityCertificate
+    },
+    {
+        title: "Codepath Foundation of AI Engineering",
+        file: "/Manish Niure.pdf",
+        icon: "🎓",
+        image: codepathCertificate
+    }
+];
 
 export const extracurriculars = [
     {

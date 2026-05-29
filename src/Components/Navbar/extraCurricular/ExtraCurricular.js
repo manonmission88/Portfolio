@@ -1,5 +1,5 @@
 import React from "react";
-import { extracurriculars } from "./ExtraCurricularData";
+import { extracurriculars, certificates } from "./ExtraCurricularData";
 import "./ExtraCurricular.css";
 import transition from '../../../transition';
 
@@ -30,6 +30,29 @@ const ExtraCurricular = () => {
                             )}
                         </div>
                     </div>
+                ))}
+            </div>
+
+            {/* Certificates Section */}
+            <h3 className="certificates-subtitle">Certificates & Achievements</h3>
+            <div className="certificates-grid">
+                {certificates.map((cert, index) => (
+                    <a
+                        key={index}
+                        href={cert.file}
+                        download
+                        className="certificate-card"
+                        title={`Download ${cert.title}`}
+                    >
+                        {cert.image ? (
+                            <div className="certificate-image-wrap">
+                                <img src={cert.image} alt={cert.title} className="certificate-image" />
+                            </div>
+                        ) : (
+                            <div className="certificate-icon">{cert.icon}</div>
+                        )}
+                        <p className="certificate-label">{cert.title}</p>
+                    </a>
                 ))}
             </div>
         </section>
