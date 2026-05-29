@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Resume from './Components/Navbar/resume/resume';
@@ -34,24 +33,38 @@ function App() {
   }, [mode]);
 
   return (
-    <Router>
-      <div className="App">
-        <BackgroundShapes />
-        <ParticleBackground />
-        <Navbar mode={mode} toggleMode={toggleMode} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/extracurricular" element={<ExtraCurricular />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<ContactSection />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-        <AIAgent />
-        <FloatingActionButton />
-      </div>
-    </Router>
+    <div className="App">
+      <BackgroundShapes />
+      <ParticleBackground />
+      <Navbar mode={mode} toggleMode={toggleMode} />
+
+      <main className="page-sections">
+        <section id="home" className="page-section">
+          <Home />
+        </section>
+        <section id="projects" className="page-section">
+          <Project />
+        </section>
+        <section id="experience" className="page-section">
+          <Experience />
+        </section>
+        <section id="extracurricular" className="page-section">
+          <ExtraCurricular />
+        </section>
+        <section id="resume" className="page-section">
+          <Resume />
+        </section>
+        <section id="gallery" className="page-section">
+          <Gallery />
+        </section>
+        <section id="contact" className="page-section">
+          <ContactSection />
+        </section>
+      </main>
+
+      <AIAgent />
+      <FloatingActionButton />
+    </div>
   );
 }
 
