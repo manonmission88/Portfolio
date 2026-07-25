@@ -33,6 +33,15 @@ export const experiences = {
     ],
     research: [
         {
+            company: "Texas A&M University",
+            role: "Graduate Research Assistant - Graph RAG, College Station, TX",
+            date: "Jan 2026 - Present",
+            details: [
+                "Developing a Graph RAG pipeline to improve answer quality and reduce query latency for long-context Q&A by leveraging Qwen LLM for semantic chunking and the NV-Embed-v2 embedding model for optimized node retrieval.",
+                "Built a lightweight graph-memory layout that minimizes memory footprint relative to HippoRAG while maintaining high accuracy for multi-hop reasoning across extensive multi-document corpora."
+            ]
+        },
+        {
             company: "Howard University",
             role: "Research Assistant - Phase Based Motion Processing, Washington, DC",
             date: "Oct 2023 - April 2024",

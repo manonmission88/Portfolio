@@ -1,0 +1,48 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <rect x="263" y="93" width="154" height="43" rx="1" fill="#E9F8E5" stroke="#4D4D4D" stroke-width="1.2"/>
+  <text x="340" y="110" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="18" font-weight="700" fill="#1F1F1F">Input Text</text>
+  <text x="340" y="125" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="14" fill="#1F1F1F">MIMIC-III Fragments</text>
+
+  <path d="M339 136V170" stroke="#4D4D4D" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="382" y="163" font-family="Times New Roman, Georgia, serif" font-size="14" fill="#1F1F1F">Tokenized Sequence</text>
+
+  <rect x="206" y="171" width="307" height="193" rx="7" stroke="#4D4D4D" stroke-width="1.2" fill="#FFFFFF"/>
+  <rect x="221" y="186" width="177" height="55" rx="5" fill="#E6E3F7" stroke="#4D4D4D" stroke-width="1"/>
+  <text x="309" y="210" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="20" font-weight="700" fill="#1F1F1F">Bio_ClinicalBERT</text>
+  <text x="309" y="226" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="14" fill="#1F1F1F">(Pre-trained Transformer)</text>
+
+  <path d="M309 241V293" stroke="#4D4D4D" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="350" y="280" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">Pooled [CLS] Vector</text>
+  <text x="352" y="294" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">R768</text>
+
+  <rect x="221" y="293" width="177" height="52" rx="5" fill="#F8ECDF" stroke="#4D4D4D" stroke-width="1"/>
+  <text x="310" y="315" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="18" font-weight="700" fill="#1F1F1F">Classification Head</text>
+  <text x="310" y="331" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="14" fill="#1F1F1F">(Dropout + Linear Layer)</text>
+
+  <path d="M398 319H474" stroke="#4D4D4D" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="431" y="308" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">Logits</text>
+
+  <rect x="488" y="294" width="153" height="38" rx="4" fill="#F6E7D9" stroke="#4D4D4D" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="564" y="311" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="16" font-weight="700" fill="#1F1F1F">Cross-Entropy Loss</text>
+  <text x="564" y="325" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">(AdamW Optimizer)</text>
+
+  <path d="M309 345V395" stroke="#4D4D4D" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="331" y="383" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">Softmax Logits</text>
+
+  <rect x="271" y="397" width="132" height="44" rx="1" fill="#F5E5ED" stroke="#4D4D4D" stroke-width="1"/>
+  <text x="337" y="414" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="17" font-weight="700" fill="#1F1F1F">Prediction</text>
+  <text x="337" y="430" text-anchor="middle" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">(Codable: 1 or 0)</text>
+
+  <path d="M476 315H498" stroke="#4D4D4D" stroke-width="1.1" stroke-dasharray="4 4"/>
+  <path d="M584 294V266H458" stroke="#4D4D4D" stroke-width="1.1" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <text x="608" y="203" font-family="Times New Roman, Georgia, serif" font-size="13" fill="#1F1F1F">Backpropagate Gradients</text>
+  <text x="82" y="280" font-family="Times New Roman, Georgia, serif" font-size="16" fill="#1F1F1F">Fine-Tuned Model</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 z" fill="#4D4D4D"/>
+    </marker>
+  </defs>
+</svg>

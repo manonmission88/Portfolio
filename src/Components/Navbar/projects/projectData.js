@@ -7,11 +7,22 @@ import disasterTweet from './images/disaster_tweet_chart.png'
 import mentoxy from './images/mentoxy.png'
 import pokedex from './images/pokedoxcli.png'
 import guardianBot from './images/guardianbot.png'
+import clinicalNlpPaper from './images/clinical-nlp-paper.svg'
 
 const analogCodeMHeightPredictor = 'https://raw.githubusercontent.com/manonmission88/Analog-Code-mHeight-Predictor/main/NeuralNetworkArchitect.png'
 const ragSearchEngineOptimized = 'https://opengraph.githubassets.com/1/manonmission88/rag-search-engine-optimized'
 
 const projectData = [
+    {
+        id: "project-11",
+        img: clinicalNlpPaper,
+        name: "Clinical NLP Models for ICD-Codable Information Detection",
+        stack: ["Python", "Clinical NLP", "BioClinicalBERT", "Llama-3", "RNN", "LSTM"],
+        source: "https://resume-manish.s3.us-east-1.amazonaws.com/Paper/ICD_CODE.pdf",
+        linkLabel: "View Paper",
+        linkVariant: "paper",
+        description: "Developed an automated data labeling pipeline that processed 2.08M clinical notes and generated 5.17M labeled training samples for clinical NLP research. Built and benchmarked RNN, LSTM, BioClinicalBERT, and Llama-3 models for ICD-codable information detection, achieving up to 73% accuracy on external evaluation datasets.",
+    },
     {
         id: "project-0",
         img: ragSearchEngineOptimized,
