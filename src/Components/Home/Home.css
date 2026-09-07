@@ -135,6 +135,10 @@
     cursor: pointer;
 }
 
+.social-icon {
+    box-sizing: border-box;
+}
+
 .social-media a:hover .social-logo {
     transform: translateY(-5px) scale(1.15);
     box-shadow: var(--shadow-lg);

@@ -23,6 +23,10 @@ Outside of tech, I enjoy playing soccer, chess, traveling, and spending time wit
         "Instagram": {
             url: "https://www.instagram.com/manish_niure88/",
             username: "manish_niure88"
+        },
+        "GoogleScholar": {
+            url: "https://scholar.google.com/citations?user=Tw_7rJMAAAAJ&hl=en",
+            username: "Manish Niure"
         }
     }
 };

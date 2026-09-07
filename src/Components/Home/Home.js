@@ -6,6 +6,7 @@ import transition from "../../transition";
 import insta from "../asset/instagram.png";
 import linkedin from "../asset/LinkedIN.png";
 import github from "../asset/github.png";
+import { Icon } from "@iconify/react";
 
 function Home() {
     return (
@@ -30,6 +31,9 @@ function Home() {
                     </a>
                     <a href={textData.media.Instagram.url} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <img src={insta} alt="Instagram" className="social-logo" />
+                    </a>
+                    <a href={textData.media.GoogleScholar.url} target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                        <Icon icon="simple-icons:googlescholar" className="social-logo social-icon" aria-hidden="true" />
                     </a>
                 </div>
             </div>

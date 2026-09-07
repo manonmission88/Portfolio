@@ -20,6 +20,8 @@ function Projects() {
                         link={project.source}
                         image={project.img}
                         stack={project.stack}
+                        linkLabel={project.linkLabel}
+                        linkVariant={project.linkVariant}
                     />
                 ))}
             </div>

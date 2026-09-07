@@ -11,8 +11,19 @@ import clinicalNlpPaper from './images/clinical-nlp-paper.svg'
 
 const analogCodeMHeightPredictor = 'https://raw.githubusercontent.com/manonmission88/Analog-Code-mHeight-Predictor/main/NeuralNetworkArchitect.png'
 const ragSearchEngineOptimized = 'https://opengraph.githubassets.com/1/manonmission88/rag-search-engine-optimized'
+const videoGameMediaPreview = 'https://docs.google.com/presentation/d/1pBqeLKiaycfHTwmi-NljR0T5tSLgQ9603DnWae3AXiE/export/png'
 
 const projectData = [
+    {
+        id: "project-12",
+        img: videoGameMediaPreview,
+        name: "Video Game Media (V.G.M) - Product Management",
+        stack: ["Product Management", "UI/UX Design", "Roadmapping", "Product Strategy"],
+        source: "https://docs.google.com/presentation/d/1pBqeLKiaycfHTwmi-NljR0T5tSLgQ9603DnWae3AXiE/edit?usp=sharing",
+        linkLabel: "View Design Doc",
+        linkVariant: "paper",
+        description: "Worked as a Product Manager in a team of four to create a video game media platform and design its UI. Developed and presented the product agenda, roadmap, and goals to Google's Product Managers, receiving positive feedback on the concept.",
+    },
     {
         id: "project-11",
         img: clinicalNlpPaper,
