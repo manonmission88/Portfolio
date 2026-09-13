@@ -3,6 +3,7 @@ import './resume.css';
 import transition from '../../../transition';
 
 const RESUME_URL = 'https://resume-manish.s3.us-east-1.amazonaws.com/manish_niure_resume.pdf';
+const RESUME_PREVIEW_URL = `${RESUME_URL}?v=${Date.now()}`;
 
 function Resume() {
     return (
@@ -48,7 +49,7 @@ function Resume() {
                     </a>
                 </div>
                 <iframe
-                    src={RESUME_URL}
+                    src={RESUME_PREVIEW_URL}
                     title="Manish Niure Resume"
                     className="resume-iframe"
                 />
