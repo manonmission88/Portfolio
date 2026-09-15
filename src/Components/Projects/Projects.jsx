@@ -11,7 +11,7 @@ const Projects = () => {
         "Co-developed Mentoxy: a platform connecting students and recent grads with mentors, leveraging comprehensive design docs and user flows in Figma.",
         "Built the front end with HTML, CSS, JavaScript, ReactJS, and integrated a MySQL database for secure, scalable mentor matching."
       ],
-      link: "#"
+      link: "https://mentoxy.com/"
     },
     {
       title: "Custom Shell",
@@ -34,7 +34,7 @@ const Projects = () => {
     },
     {
       title: "Local Wiki",
-      type: "GitHub Repo",
+      type: "",
       date: "May 2023",
       description: [
         "Developed a wiki application using Python, Flask, HTML, CSS, and Jinja, enabling dynamic content for local place information.",

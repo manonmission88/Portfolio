@@ -8,12 +8,20 @@ import mentoxy from './images/mentoxy.png'
 import pokedex from './images/pokedoxcli.png'
 import guardianBot from './images/guardianbot.png'
 import clinicalNlpPaper from './images/clinical-nlp-paper.svg'
+import soniqueGif from './images/sonique.gif'
 
 const analogCodeMHeightPredictor = 'https://raw.githubusercontent.com/manonmission88/Analog-Code-mHeight-Predictor/main/NeuralNetworkArchitect.png'
 const ragSearchEngineOptimized = 'https://opengraph.githubassets.com/1/manonmission88/rag-search-engine-optimized'
 const videoGameMediaPreview = 'https://docs.google.com/presentation/d/1pBqeLKiaycfHTwmi-NljR0T5tSLgQ9603DnWae3AXiE/export/png'
-
-const projectData = [
+const projectData = [,
+    {
+        id: "project-13",
+        img: soniqueGif,
+        name: "SONIQUE",
+        stack: ["Swift", "iOS", "Gemini API", "Voice Recognition"],
+        source: "https://github.com/manonmission88/SONIQUE",
+        description: "Developed SONIQUE, an AI-powered iOS learning app using Swift, Gemini API, and voice recognition, creating an accessible and interactive experience to help visually impaired children learn through real-time voice feedback.",
+    },
     {
         id: "project-12",
         img: videoGameMediaPreview,
@@ -53,17 +61,17 @@ const projectData = [
     {
         id: "project-2",
         img: customShell, // Using shell image as placeholder for CLI tool
-        name: "Blog Aggregator (GitHub Repo)",
+        name: "Blog Aggregator",
         stack: ["Go", "PostgreSQL", "sqlc", "goose", "RSS", "CLI"],
-        source: "https://github.com/manonmission88/blog-aggregator", // Replace with actual GitHub link
+        source: "https://github.com/manonmission88/BlogAggregator", // Replace with actual GitHub link
         description: "Developed a command-line RSS aggregator in Go with functionality to follow/unfollow feeds and view summaries or full articles directly in the terminal. Utilized PostgreSQL with sqlc and goose for migrations and type-safe queries; implemented scheduled background tasks for fetching, parsing, and deduplicating feed data.",
     },
     {
         id: "project-3",
         img: mentoxy, // Using existing image, you can replace with actual Mentoxy image
-        name: "Mentoxy (Website)",
+        name: "Mentoxy",
         stack: ["ReactJS", "HTML", "CSS", "JavaScript", "MySQL", "Figma"],
-        source: "https://github.com/manonmission88/mentoxy", // Replace with actual GitHub link
+        source: "https://mentoxy.com/", // Replace with actual GitHub link
         description: "Co-founded Mentoxy, a site to help students connect with mentors. Took the lead on building the front-end with ReactJS, HTML, CSS, and JavaScript, based on our Figma designs. Set up the MySQL database and built the main mentor matching system, focusing on making it user-friendly and keeping everyone's data secure.",
     },
     {
@@ -79,7 +87,7 @@ const projectData = [
         img: pokedex,
         name: "Pokedex CLI Game",
         stack: ["Go", "CLI", "REST API", "REPL"],
-        source: "https://github.com/manonmission88/PokeGoCli", // Replace with actual GitHub link
+        source: "https://github.com/manonmission88/PokeGoCli/tree/main", // Replace with actual GitHub link
         description: "Developed an interactive command-line Pokemon game in Go with a REPL interface for exploring regions, catching, and inspecting Pokemon using live API data. Implemented in-memory caching and pagination to optimize API usage, reduce latency, and improve memory efficiency across sessions.",
     },
     {
